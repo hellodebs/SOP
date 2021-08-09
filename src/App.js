@@ -5,10 +5,11 @@ import Order from "./pages/Order.js";
 import Bill from "./pages/Bill.js";
 import Service from "./pages/Service.js";
 import Navigation from "./components/Navigation";
+import Div100vh from "react-div-100vh";
 
 function App() {
   return (
-    <div className="App">
+    <Div100vh className="App">
       <header className="App__header">
         <Switch>
           <Route path="/menu">
@@ -39,7 +40,7 @@ function App() {
       <footer className="App__footer">
         <Navigation />
       </footer>
-    </div>
+    </Div100vh>
   );
 }
 

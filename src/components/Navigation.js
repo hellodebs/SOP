@@ -3,17 +3,17 @@ import "./Navigation.css";
 
 export default function Navigation() {
   return (
-    <nav className="App__nav">
-      <NavLink className="App__navlink" to="/menu">
+    <nav className="Navigation__nav">
+      <NavLink className="Navigation__navlink" to="/menu">
         Menu
       </NavLink>
-      <NavLink className="App__navlink" to="/order">
+      <NavLink className="Navigation__navlink" to="/order">
         Order
       </NavLink>
-      <NavLink className="App__navlink" to="/bill">
+      <NavLink className="Navigation__navlink" to="/bill">
         Bill
       </NavLink>
-      <NavLink className="App__navlink" to="/service">
+      <NavLink className="Navigation__navlink" to="/service">
         Service
       </NavLink>
     </nav>
