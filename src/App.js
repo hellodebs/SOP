@@ -1,9 +1,10 @@
 import "./App.css";
-import { Route, NavLink, Switch, Redirect } from "react-router-dom";
-import Menu from "./components/Menu";
-import Order from "./components/Order.js";
-import Bill from "./components/Bill.js";
-import Service from "./components/Service.js";
+import { Route, Switch, Redirect } from "react-router-dom";
+import Menu from "./pages/Menu";
+import Order from "./pages/Order.js";
+import Bill from "./pages/Bill.js";
+import Service from "./pages/Service.js";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
@@ -36,20 +37,7 @@ function App() {
         <p>Content example 6</p>
       </main>
       <footer className="App__footer">
-        <nav className="App__nav">
-          <NavLink className="App__navlink" to="/menu">
-            Menu
-          </NavLink>
-          <NavLink className="App__navlink" to="/order">
-            Order
-          </NavLink>
-          <NavLink className="App__navlink" to="/bill">
-            Bill
-          </NavLink>
-          <NavLink className="App__navlink" to="/service">
-            Service
-          </NavLink>
-        </nav>
+        <Navigation />
       </footer>
     </div>
   );
