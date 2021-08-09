@@ -23,7 +23,7 @@
 
 .App__main {
   height: 100vh;
-  padding: 160px;
+  padding-top: 100px;
   overflow-y: scroll;
 }
 
