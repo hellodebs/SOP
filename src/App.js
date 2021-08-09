@@ -29,10 +29,18 @@ function App() {
       </main>
       <footer className="app__footer">
         <nav className="app__nav">
-          <NavLink to="/menu">Menu</NavLink>
-          <NavLink to="/order">Order</NavLink>
-          <NavLink to="/bill">Bill</NavLink>
-          <NavLink to="/service">Service</NavLink>
+          <NavLink className="app__navlink" to="/menu">
+            Menu
+          </NavLink>
+          <NavLink className="app__navlink" to="/order">
+            Order
+          </NavLink>
+          <NavLink className="app__navlink" to="/bill">
+            Bill
+          </NavLink>
+          <NavLink className="app__navlink" to="/service">
+            Service
+          </NavLink>
         </nav>
       </footer>
     </div>
