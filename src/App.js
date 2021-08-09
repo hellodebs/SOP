@@ -8,7 +8,7 @@ import Service from "./components/Service.js";
 function App() {
   return (
     <div className="App">
-      <header className="app__header">
+      <header className="App__header">
         <Switch>
           <Route path="/menu">
             <Menu />
@@ -27,26 +27,26 @@ function App() {
           </Route>
         </Switch>
       </header>
-      <main className="app__main">
-        <p>Dish 1</p>
-        <p>Dish 2</p>
-        <p>Dish 3</p>
-        <p>Dish 4</p>
-        <p>Dish 5</p>
-        <p>Dish 6</p>
+      <main className="App__main">
+        <p>Content example 1</p>
+        <p>Content example 2</p>
+        <p>Content example 3</p>
+        <p>Content example 4</p>
+        <p>Content example 5</p>
+        <p>Content example 6</p>
       </main>
-      <footer className="app__footer">
-        <nav className="app__nav">
-          <NavLink className="app__navlink" to="/menu">
+      <footer className="App__footer">
+        <nav className="App__nav">
+          <NavLink className="App__navlink" to="/menu">
             Menu
           </NavLink>
-          <NavLink className="app__navlink" to="/order">
+          <NavLink className="App__navlink" to="/order">
             Order
           </NavLink>
-          <NavLink className="app__navlink" to="/bill">
+          <NavLink className="App__navlink" to="/bill">
             Bill
           </NavLink>
-          <NavLink className="app__navlink" to="/service">
+          <NavLink className="App__navlink" to="/service">
             Service
           </NavLink>
         </nav>
