@@ -1,5 +1,5 @@
 import "./App.css";
-import { Route, NavLink, Switch } from "react-router-dom";
+import { Route, NavLink, Switch, Redirect } from "react-router-dom";
 import Menu from "./components/Menu";
 import Order from "./components/Order.js";
 import Bill from "./components/Bill.js";
@@ -21,6 +21,9 @@ function App() {
           </Route>
           <Route path="/service">
             <Service />
+          </Route>
+          <Route path="/">
+            <Redirect to="/menu" />
           </Route>
         </Switch>
       </header>
