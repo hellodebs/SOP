@@ -25,7 +25,12 @@ function App() {
         </Switch>
       </header>
       <main className="app__main">
-        <p>blabla</p>
+        <p>Dish 1</p>
+        <p>Dish 2</p>
+        <p>Dish 3</p>
+        <p>Dish 4</p>
+        <p>Dish 5</p>
+        <p>Dish 6</p>
       </main>
       <footer className="app__footer">
         <nav className="app__nav">
