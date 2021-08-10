@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "image": "Mandu.jpg",
     "type": "Starter",
     "name": "Mandu",
     "description": "Steamed dumplings with seafood filling",
@@ -8,6 +9,7 @@
   },
   {
     "id": "2",
+    "image": "summer-rolls.jpg",
     "type": "Starter",
     "name": "Summer Rolls",
     "description": "Various fillings in rice paper",
@@ -15,6 +17,7 @@
   },
   {
     "id": "3",
+    "image": "Tteokbokki.jpg",
     "type": "Main",
     "name": "Tteokbbokki",
     "description": "Hot spicy ricecake with fishcak and vegetable",
@@ -23,6 +26,7 @@
 
   {
     "id": "4",
+    "image": "curry-rice.jpg",
     "type": "Main",
     "name": "Curry Rice",
     "description": "White rice with spicy curry and vegetables",
@@ -30,6 +34,7 @@
   },
   {
     "id": "5",
+    "image": "Bulgogi.jpg",
     "type": "Main",
     "name": "Bulgogi",
     "description": "Stir fried beef sclices with vegetables. Served with white rice.",
@@ -37,6 +42,7 @@
   },
   {
     "id": "6",
+    "image": "mochi.jpg",
     "type": "Dessert",
     "name": "Mochi",
     "description": "Rice cake with ice cream filling",
@@ -44,6 +50,7 @@
   },
   {
     "id": "7",
+    "image": "bungo-bbang.jpg",
     "type": "Dessert",
     "name": "Bungo Bbang",
     "description": "Fish shaped waffle with red bean fillings",
@@ -51,24 +58,28 @@
   },
   {
     "id": "8",
+    "image": "CocaCola.webp",
     "type": "Non alcoholic drinks",
     "name": "Coca Cola 0,3L",
     "price": 350
   },
   {
     "id": "9",
+    "image": "water.jpg",
     "type": "Non alcoholic drinks",
     "name": "Water sparkling/still 0,75L",
     "price": 530
   },
   {
     "id": "11",
+    "image": "sauvginon-blanc.jpg",
     "type": "Alcoholic Drinks",
     "name": "Savignon Blanc 0,2L",
     "price": 460
   },
   {
     "id": "12",
+    "image": "Alsterwasser.jpg",
     "type": "Alcoholic Drinks",
     "name": "Alsterwasser 0,3L",
     "price": 380
