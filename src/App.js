@@ -19,10 +19,10 @@ function App() {
             <h2>Order</h2>
           </Route>
           <Route path="/bill">
-            <Bill />
+            <h2>Bill</h2>
           </Route>
           <Route path="/service">
-            <Service />
+            <h2>Service</h2>
           </Route>
           <Route path="/">
             <Redirect to="/menu" />
@@ -36,6 +36,12 @@ function App() {
           </Route>
           <Route path="/order">
             <Order />
+          </Route>
+          <Route path="/bill">
+            <Bill />
+          </Route>
+          <Route path="/service">
+            <Service />
           </Route>
         </Switch>
       </main>
