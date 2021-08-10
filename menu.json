@@ -1,0 +1,70 @@
+[
+  {
+    "type": "Starter",
+    "name": "Mandu",
+    "description": "Steamed dumplings with seafood filling",
+    "price": 800
+  },
+  {
+    "type": "Starter",
+    "name": "Summer Rolls",
+    "description": "Various fillings in rice paper",
+    "price": 890
+  },
+  {
+    "type": "Main",
+    "name": "Tteokbbokki",
+    "description": "Hot spicy ricecake with fishcak and vegetable",
+    "price": 1150
+  },
+
+  {
+    "type": "Main",
+    "name": "Curry Rice",
+    "description": "White rice with spicy curry and vegetables",
+    "price": 1200
+  },
+  {
+    "type": "Main",
+    "name": "Bulgogi",
+    "description": "Stir fried beef sclices with vegetables. Served with white rice.",
+    "price": 800
+  },
+  {
+    "type": "Dessert",
+    "name": "Mochi",
+    "description": "Rice cake with ice cream filling",
+    "price": 120
+  },
+  {
+    "type": "Dessert",
+    "name": "Bungo Bbang",
+    "description": "Fish shaped waffle with red bean fillings",
+    "price": 360
+  },
+  {
+    "type": "Non alcoholic drinks",
+    "name": "Coca Cola 0,3L",
+    "price": 350
+  },
+  {
+    "type": "Non alcoholic drinks",
+    "name": "Water sparkling/still 0,75L",
+    "price": 530
+  },
+  {
+    "type": "Non alcoholic drinks",
+    "name": "Fanta 0,3L",
+    "price": 350
+  },
+  {
+    "type": "Alcoholic Drinks",
+    "name": "Savignon Blanc 0,2L",
+    "price": 460
+  },
+  {
+    "type": "Alcoholic Drinks",
+    "name": "Alsterwasser 0,3L",
+    "price": 380
+  }
+]
