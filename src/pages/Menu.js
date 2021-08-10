@@ -1,6 +1,6 @@
 export default function Menu() {
   return (
-    <div>
+    <section>
       <div>
         <p>Dish example 1</p>
       </div>
@@ -28,6 +28,6 @@ export default function Menu() {
       <div>
         <p>Dish example 9</p>
       </div>
-    </div>
+    </section>
   );
 }

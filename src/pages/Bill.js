@@ -1,6 +1,6 @@
 export default function Bill() {
   return (
-    <div>
+    <section>
       <div>
         <p>Dish example 1</p>
       </div>
@@ -31,6 +31,6 @@ export default function Bill() {
       <div>
         <p>Total: 64.20€</p>
       </div>
-    </div>
+    </section>
   );
 }

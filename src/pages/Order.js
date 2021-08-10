@@ -1,6 +1,6 @@
 export default function Order() {
   return (
-    <div>
+    <section>
       <div>
         <p>I want dish 1</p>
       </div>
@@ -28,6 +28,6 @@ export default function Order() {
       <div>
         <p>I want dish 9</p>
       </div>
-    </div>
+    </section>
   );
 }
