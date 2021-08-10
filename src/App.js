@@ -13,10 +13,10 @@ function App() {
       <header className="App__header">
         <Switch>
           <Route path="/menu">
-            <Menu />
+            <h2>Menu</h2>
           </Route>
           <Route path="/order">
-            <Order />
+            <h2>Order</h2>
           </Route>
           <Route path="/bill">
             <Bill />
@@ -30,12 +30,14 @@ function App() {
         </Switch>
       </header>
       <main className="App__main">
-        <p>Content example 1</p>
-        <p>Content example 2</p>
-        <p>Content example 3</p>
-        <p>Content example 4</p>
-        <p>Content example 5</p>
-        <p>Content example 6</p>
+        <Switch>
+          <Route path="/menu">
+            <Menu />
+          </Route>
+          <Route path="/order">
+            <Order />
+          </Route>
+        </Switch>
       </main>
       <footer className="App__footer">
         <Navigation />
