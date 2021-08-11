@@ -14,7 +14,14 @@ export default function Menu() {
   return (
     <>
       {items.map((item) => {
-        return item.name;
+        return (
+          <div>
+            <p>{item.type}</p>
+            <p>{item.name}</p>
+            <p>{item.description}</p>
+            <p>{item.price}</p>
+          </div>
+        );
       })}
     </>
   );
