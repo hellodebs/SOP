@@ -7,16 +7,16 @@ export default function Navigation() {
   return (
     <nav className="Navigation__nav">
       <NavLink className="Navigation__navlink" to="/menu">
-        <BiFoodMenu />
+        <BiFoodMenu className="Navigation__icon" />
       </NavLink>
       <NavLink className="Navigation__navlink" to="/order">
-        <BiCart />
+        <BiCart className="Navigation__icon" />
       </NavLink>
       <NavLink className="Navigation__navlink" to="/bill">
-        <BiMoney />
+        <BiMoney className="Navigation__icon" />
       </NavLink>
       <NavLink className="Navigation__navlink" to="/service">
-        <IoHelpBuoyOutline />
+        <IoHelpBuoyOutline className="Navigation__icon" />
       </NavLink>
     </nav>
   );

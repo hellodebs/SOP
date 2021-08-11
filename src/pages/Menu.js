@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./Menu.css";
 
 export default function Menu() {
   const [items, setItems] = useState([]);
@@ -15,7 +16,7 @@ export default function Menu() {
     <>
       {items.map((item) => {
         return (
-          <div>
+          <div className="menu__item">
             <p>{item.type}</p>
             <p>{item.name}</p>
             <p>{item.description}</p>
