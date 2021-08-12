@@ -6,3 +6,7 @@
 .Navigation__navlink {
   text-decoration: none;
 }
+
+.Navigation__icon {
+  color: black;
+}

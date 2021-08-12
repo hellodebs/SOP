@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import MenuItem from "../components/MenuItem";
 
 export default function Menu() {
   const [items, setItems] = useState([]);
@@ -9,12 +10,15 @@ export default function Menu() {
       .then((res) => res.json())
       .then((data) => {
         setItems(data.items);
+      })
+      .catch((error) => {
+        console.error(error);
       });
   }, []);
   return (
     <>
       {items.map((item) => {
-        return item.name;
+        return <MenuItem key={item.id} item={item} />;
       })}
     </>
   );

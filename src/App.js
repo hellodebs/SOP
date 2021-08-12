@@ -13,16 +13,16 @@ function App() {
       <header className="App__header">
         <Switch>
           <Route path="/menu">
-            <h2>Menu</h2>
+            <h2 className="App__heading">Menu</h2>
           </Route>
           <Route path="/order">
-            <h2>Order</h2>
+            <h2 className="App__heading">Order</h2>
           </Route>
           <Route path="/bill">
-            <h2>Bill</h2>
+            <h2 className="App__heading">Bill</h2>
           </Route>
           <Route path="/service">
-            <h2>Service</h2>
+            <h2 className="App__heading">Service</h2>
           </Route>
           <Route path="/">
             <Redirect to="/menu" />
