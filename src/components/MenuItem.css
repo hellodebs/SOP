@@ -1,0 +1,22 @@
+.menu__item {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  padding: 1.25em;
+  margin: 1.25rem;
+  text-align: left;
+}
+
+.menu__counter--buttons {
+  border: none;
+  background-color: white;
+  padding: 0 0.5em;
+  font-size: 1.5rem;
+}
+
+.menu__counter {
+  text-align: right;
+}
+
+.menu__counter--number {
+  font-size: 1.2rem;
+}
