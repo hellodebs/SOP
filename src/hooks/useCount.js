@@ -8,9 +8,8 @@ export default function useCount() {
   }
 
   function decrement() {
-    setCount(count - 1);
-    if (count === 0) {
-      setCount(0);
+    if (count > 0) {
+      setCount(count - 1);
     }
   }
   return [count, increment, decrement];
