@@ -20,10 +20,18 @@ export default function Navigation() {
       >
         <BiCart className="Navigation__icon" />
       </NavLink>
-      <NavLink className="Navigation__navlink" to="/bill">
+      <NavLink
+        className="Navigation__navlink"
+        activeClassName="Navigation__navlink--active"
+        to="/bill"
+      >
         <BiMoney className="Navigation__icon" />
       </NavLink>
-      <NavLink className="Navigation__navlink" to="/service">
+      <NavLink
+        className="Navigation__navlink"
+        activeClassName="Navigation__navlink--active"
+        to="/service"
+      >
         <IoHelpBuoyOutline className="Navigation__icon" />
       </NavLink>
     </nav>
