@@ -9,5 +9,10 @@
 .menu__buttons {
   border: none;
   background-color: white;
-  padding: 0 0.2rem 0 0.2rem;
+  padding: 0 0.4rem 0 0.4rem;
+  font-size: 20px;
+}
+
+.menu__div {
+  text-align: right;
 }

@@ -8,15 +8,16 @@ export default function MenuItem({ item }) {
       <p>{item.type}</p>
       <p>{item.name}</p>
       <p>{item.description}</p>
-      <p>{item.price / 100}</p>
-
-      <button className="menu__buttons" onClick={increment}>
-        +
-      </button>
-      {count}
-      <button className="menu__buttons" onClick={decrement}>
-        -
-      </button>
+      <div className="menu__div">
+        <p>{item.price / 100}</p>
+        <button className="menu__buttons" onClick={increment}>
+          +
+        </button>
+        {count}
+        <button className="menu__buttons" onClick={decrement}>
+          -
+        </button>
+      </div>
     </div>
   );
 }
