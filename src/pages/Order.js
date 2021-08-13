@@ -20,6 +20,10 @@ export default function Order() {
       <p>I want dish 8</p>
 
       <p>I want dish 9</p>
+
+      <button type="submit" className="order__item--button">
+        Confirm Order
+      </button>
     </div>
   );
 }
