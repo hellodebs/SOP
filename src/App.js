@@ -6,8 +6,10 @@ import Bill from "./pages/Bill.js";
 import Service from "./pages/Service.js";
 import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";
+import { useState } from "react";
 
 function App() {
+  const [addItem, newAdditem] = useState();
   return (
     <Div100vh className="App">
       <header className="App__header">
