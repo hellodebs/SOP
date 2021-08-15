@@ -17,3 +17,7 @@
   padding: 0.5em;
   font-size: 1.2rem;
 }
+
+.order__item--delete {
+  font-size: 1.2rem;
+}

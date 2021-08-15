@@ -1,48 +1,33 @@
 import "./Order.css";
-import { BiX } from "react-icons/bi";
+import { useState } from "react";
+import OrderItem from "../components/OrderItem";
+// import { BiX } from "react-icons/bi";
 
 export default function Order() {
-  return (
-    <div className="order__item">
-      <p>
-        I want dish 1 <BiX />
-      </p>
+  const [order, setOrder] = useState([
+    {
+      id: 5,
+      quantity: 3,
+    },
+    {
+      id: 9,
+      quantity: 3,
+    },
+    {
+      id: 11,
+      quantity: 1,
+    },
+  ]);
 
-      <p>
-        I want dish 2 <BiX />
-      </p>
+  return order.map((orderItem) => {
+    return <OrderItem orderItem={orderItem} />;
+  });
 
-      <p>
-        I want dish 3 <BiX />
-      </p>
+  // /* <p>
+  //   I want dish 1 <BiX className="order__item--delete" />
+  // </p>
 
-      <p>
-        I want dish 4 <BiX />
-      </p>
-
-      <p>
-        I want dish 5 <BiX />
-      </p>
-
-      <p>
-        I want dish 6 <BiX />
-      </p>
-
-      <p>
-        I want dish 7 <BiX />
-      </p>
-
-      <p>
-        I want dish 8 <BiX />
-      </p>
-
-      <p>
-        I want dish 9 <BiX />
-      </p>
-
-      <button type="submit" className="order__item--button">
-        Confirm Order
-      </button>
-    </div>
-  );
+  // <button type="submit" className="order__item--button">
+  //   Confirm Order
+  // </button>
 }
