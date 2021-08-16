@@ -14,7 +14,7 @@ export default function MenuItem({ item }) {
           className="menu__item--image"
         />
         <div>
-          <p>{item.type}</p>
+          <p className="menu__item--type">{item.type}</p>
           <p>{item.name}</p>
           <p>{item.description}</p>
         </div>

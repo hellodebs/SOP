@@ -14,6 +14,10 @@
   gap: 1em;
 }
 
+.menu__item--type {
+  font-weight: bold;
+}
+
 .menu__item--price {
   text-align: right;
   font-size: 1.2rem;
@@ -36,6 +40,6 @@
 }
 
 .menu__item--image {
-  height: 12vh;
-  width: 12vh;
+  height: 13vh;
+  width: 13vh;
 }

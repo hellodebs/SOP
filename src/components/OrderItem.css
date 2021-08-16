@@ -1,9 +1,17 @@
+@import "../styles/_color.css";
+
 .order__item {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   padding: 1.25em;
   margin: 1.25rem;
   text-align: left;
+}
+
+.order__item--content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
 }
 
 .order__item--button {
@@ -17,5 +25,10 @@
 }
 
 .order__item--delete {
+  text-align: right;
   font-size: 1.2rem;
+}
+.order__item--image {
+  height: 13vh;
+  width: 13vh;
 }
