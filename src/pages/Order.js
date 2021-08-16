@@ -1,9 +1,8 @@
 import "./Order.css";
 import { useState } from "react";
 import OrderItem from "../components/OrderItem";
-// import { BiX } from "react-icons/bi";
 
-export default function Order() {
+export default function Order({ items }) {
   const [order, setOrder] = useState([
     {
       id: 5,
@@ -19,20 +18,11 @@ export default function Order() {
     },
   ]);
 
-  return order
-    .map((orderItem) => {
-      return <OrderItem orderItem={orderItem} key={orderItem.id} />;
-    })
-    .filter((nameById) => {
-      console.log(nameById);
-      return nameById;
+  return order.map((orderItem) => {
+    const menuItem = items.filter((item) => {
+      return item.id === orderItem.id;
     });
-
-  // /* <p>
-  //   I want dish 1 <BiX className="order__item--delete" />
-  // </p>
-
-  // <button type="submit" className="order__item--button">
-  //   Confirm Order
-  // </button>
+    orderItem = { ...orderItem, ...menuItem[0] };
+    return <OrderItem orderItem={orderItem} key={orderItem.id} />;
+  });
 }
