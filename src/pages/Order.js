@@ -20,7 +20,7 @@ export default function Order() {
   ]);
 
   return order.map((orderItem) => {
-    return <OrderItem orderItem={orderItem} />;
+    return <OrderItem orderItem={orderItem} key={orderItem.id} />;
   });
 
   // /* <p>
