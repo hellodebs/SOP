@@ -12,6 +12,6 @@ export default function OrderItem({ orderItem }) {
   );
 }
 
-// <button type="submit" className="order__item--button">
-//   Confirm Order
-// </button>
+<button type="submit" className="order__item--button">
+  Confirm Order
+</button>;

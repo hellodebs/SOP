@@ -1,8 +1,7 @@
-import { useState } from "react";
 import OrderItem from "../components/OrderItem";
 
 export default function Order({ items }) {
-  const [order, setOrder] = useState([
+  const order = [
     {
       id: 5,
       quantity: 3,
@@ -15,7 +14,7 @@ export default function Order({ items }) {
       id: 11,
       quantity: 1,
     },
-  ]);
+  ];
 
   return order.map((orderItem) => {
     const menuItem = items.filter((item) => {
