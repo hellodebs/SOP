@@ -6,17 +6,23 @@ export default function MenuItem({ item }) {
   const [count, increment, decrement] = useCount();
 
   return (
-    <div className="menu__item">
-      <img src={`/images/menu/${item.id}.jpg`} alt={item.name} />
-      <p>{item.type}</p>
-      <p>{item.name}</p>
-      <p>{item.description}</p>
-      <p>{item.price / 100}</p>
+    <section className="menu__item">
+      <div className="menu__item--content">
+        <img
+          src={`/images/menu/${item.id}.jpg`}
+          alt={item.name}
+          className="menu__item--image"
+        />
+        <p>{item.type}</p>
+        <p>{item.name}</p>
+        <p>{item.description}</p>
+        <p>{item.price / 100}</p>
+      </div>
       <div className="menu__counter">
         <BiPlus className="menu__counter--button" onClick={increment} />
         <span className="menu__counter--number">{count}</span>
         <BiMinus className="menu__counter--button" onClick={decrement} />
       </div>
-    </div>
+    </section>
   );
 }

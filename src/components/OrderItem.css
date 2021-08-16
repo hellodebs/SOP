@@ -1,8 +1,12 @@
-.order__item--delete {
-  font-size: 1.2rem;
+.order__item {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  padding: 1.25em;
+  margin: 1.25rem;
+  text-align: left;
 }
 
-.order__item > p {
+/* .order__item > p {
   display: flex;
   justify-content: space-between;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
@@ -10,4 +14,19 @@
   padding: 1.25em;
   margin: 1.25rem;
   text-align: left;
+} */
+
+.order__item--button {
+  margin: 1.25rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  padding: 0.5em;
+  font-size: 1.2rem;
+}
+
+.order__item--delete {
+  font-size: 1.2rem;
+  text-align: right;
 }

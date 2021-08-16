@@ -6,6 +6,11 @@
   text-align: left;
 }
 
+.menu__item--content {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .menu__counter--button {
   border: none;
   background-color: white;
@@ -19,4 +24,9 @@
 .menu__counter--number {
   font-size: 1.3rem;
   padding: 0.2em;
+}
+
+.menu__item--image {
+  height: 10vh;
+  width: 12vh;
 }

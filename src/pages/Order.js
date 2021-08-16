@@ -1,4 +1,3 @@
-import "./Order.css";
 import { useState } from "react";
 import OrderItem from "../components/OrderItem";
 
