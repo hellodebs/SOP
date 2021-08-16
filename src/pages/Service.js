@@ -1,12 +1,14 @@
+import "./Service.css";
+import { BiUserCheck } from "react-icons/bi";
+
 export default function Service() {
   return (
-    <section>
-      <div>
-        <p>Thank you!</p>
-      </div>
-      <div>
-        <p>One member of our Team will be with you shortly!</p>
-      </div>
-    </section>
+    <div className="service__text">
+      <p>Thank you!</p>
+
+      <p>One member of our Team will be with you shortly!</p>
+
+      <BiUserCheck className="service__icon" />
+    </div>
   );
 }

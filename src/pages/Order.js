@@ -1,33 +1,26 @@
-export default function Order() {
-  return (
-    <section>
-      <div>
-        <p>I want dish 1</p>
-      </div>
-      <div>
-        <p>I want dish 2</p>
-      </div>
-      <div>
-        <p>I want dish 3</p>
-      </div>
-      <div>
-        <p>I want dish 4</p>
-      </div>
-      <div>
-        <p>I want dish 5</p>
-      </div>
-      <div>
-        <p>I want dish 6</p>
-      </div>
-      <div>
-        <p>I want dish 7</p>
-      </div>
-      <div>
-        <p>I want dish 8</p>
-      </div>
-      <div>
-        <p>I want dish 9</p>
-      </div>
-    </section>
-  );
+import OrderItem from "../components/OrderItem";
+
+export default function Order({ items }) {
+  const order = [
+    {
+      id: 5,
+      quantity: 3,
+    },
+    {
+      id: 9,
+      quantity: 3,
+    },
+    {
+      id: 11,
+      quantity: 1,
+    },
+  ];
+
+  return order.map((orderItem) => {
+    const menuItem = items.filter((item) => {
+      return item.id === orderItem.id;
+    });
+    orderItem = { ...orderItem, ...menuItem[0] };
+    return <OrderItem orderItem={orderItem} key={orderItem.id} />;
+  });
 }

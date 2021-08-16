@@ -1,5 +1,6 @@
 import "./App.css";
 import { Route, Switch, Redirect } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order.js";
 import Bill from "./pages/Bill.js";
@@ -8,6 +9,18 @@ import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";
 
 function App() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const url = "/api/menu.json";
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setItems(data.items))
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <Div100vh className="App">
       <header className="App__header">
@@ -32,10 +45,10 @@ function App() {
       <main className="App__main">
         <Switch>
           <Route path="/menu">
-            <Menu />
+            <Menu items={items} />
           </Route>
           <Route path="/order">
-            <Order />
+            <Order items={items} />
           </Route>
           <Route path="/bill">
             <Bill />

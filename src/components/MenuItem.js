@@ -1,23 +1,30 @@
 import "./MenuItem.css";
 import useCount from "../hooks/useCount";
+import { BiMinus, BiPlus } from "react-icons/bi";
 
 export default function MenuItem({ item }) {
   const [count, increment, decrement] = useCount();
+
   return (
-    <div className="menu__item">
-      <p>{item.type}</p>
-      <p>{item.name}</p>
-      <p>{item.description}</p>
-      <p>{item.price / 100}</p>
-      <div className="menu__counter">
-        <button className="menu__counter--buttons" onClick={increment}>
-          +
-        </button>
-        <span className="menu__counter--number">{count}</span>
-        <button className="menu__counter--buttons" onClick={decrement}>
-          -
-        </button>
+    <section className="menu__item">
+      <div className="menu__item--content">
+        <img
+          src={`/images/menu/${item.id}.jpg`}
+          alt={item.name}
+          className="menu__item--image"
+        />
+        <p>
+          {item.type}
+          {item.name}
+          {item.description}
+        </p>
+        <p className="menu__item--price">{item.price / 100}</p>
       </div>
-    </div>
+      <div className="menu__counter">
+        <BiPlus className="menu__counter--button" onClick={increment} />
+        <span className="menu__counter--number">{count}</span>
+        <BiMinus className="menu__counter--button" onClick={decrement} />
+      </div>
+    </section>
   );
 }

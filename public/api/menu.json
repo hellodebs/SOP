@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "id": "1",
+      "id": 1,
       "image": true,
       "type": "Starter",
       "name": "Mandu",
@@ -9,7 +9,7 @@
       "price": 800
     },
     {
-      "id": "2",
+      "id": 2,
       "image": true,
       "type": "Starter",
       "name": "Summer Rolls",
@@ -17,7 +17,7 @@
       "price": 890
     },
     {
-      "id": "3",
+      "id": 3,
       "image": true,
       "type": "Main",
       "name": "Tteokbbokki",
@@ -26,7 +26,7 @@
     },
 
     {
-      "id": "4",
+      "id": 4,
       "image": true,
       "type": "Main",
       "name": "Curry Rice",
@@ -34,7 +34,7 @@
       "price": 1200
     },
     {
-      "id": "5",
+      "id": 5,
       "image": true,
       "type": "Main",
       "name": "Bulgogi",
@@ -42,7 +42,7 @@
       "price": 800
     },
     {
-      "id": "6",
+      "id": 6,
       "image": true,
       "type": "Dessert",
       "name": "Mochi",
@@ -50,7 +50,7 @@
       "price": 120
     },
     {
-      "id": "7",
+      "id": 7,
       "image": true,
       "type": "Dessert",
       "name": "Bungo Bbang",
@@ -58,25 +58,25 @@
       "price": 360
     },
     {
-      "id": "8",
+      "id": 8,
       "type": "Non alcoholic drinks",
       "name": "Coca Cola 0,3L",
       "price": 350
     },
     {
-      "id": "9",
+      "id": 9,
       "type": "Non alcoholic drinks",
       "name": "Water sparkling/still 0,75L",
       "price": 530
     },
     {
-      "id": "11",
+      "id": 10,
       "type": "Alcoholic Drinks",
       "name": "Savignon Blanc 0,2L",
       "price": 460
     },
     {
-      "id": "12",
+      "id": 11,
       "type": "Alcoholic Drinks",
       "name": "Alsterwasser 0,3L",
       "price": 380

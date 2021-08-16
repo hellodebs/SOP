@@ -6,16 +6,32 @@ import { IoHelpBuoyOutline } from "react-icons/io5";
 export default function Navigation() {
   return (
     <nav className="Navigation__nav">
-      <NavLink className="Navigation__navlink" to="/menu">
+      <NavLink
+        className="Navigation__navlink"
+        activeClassName="Navigation__navlink--active"
+        to="/menu"
+      >
         <BiFoodMenu className="Navigation__icon" />
       </NavLink>
-      <NavLink className="Navigation__navlink" to="/order">
+      <NavLink
+        className="Navigation__navlink"
+        activeClassName="Navigation__navlink--active"
+        to="/order"
+      >
         <BiCart className="Navigation__icon" />
       </NavLink>
-      <NavLink className="Navigation__navlink" to="/bill">
+      <NavLink
+        className="Navigation__navlink"
+        activeClassName="Navigation__navlink--active"
+        to="/bill"
+      >
         <BiMoney className="Navigation__icon" />
       </NavLink>
-      <NavLink className="Navigation__navlink" to="/service">
+      <NavLink
+        className="Navigation__navlink"
+        activeClassName="Navigation__navlink--active"
+        to="/service"
+      >
         <IoHelpBuoyOutline className="Navigation__icon" />
       </NavLink>
     </nav>

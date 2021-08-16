@@ -6,11 +6,21 @@
   text-align: left;
 }
 
-.menu__counter--buttons {
+.menu__item--content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.menu__item--price {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.menu__counter--button {
   border: none;
   background-color: white;
-  padding: 0 0.5em;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .menu__counter {
@@ -18,5 +28,11 @@
 }
 
 .menu__counter--number {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  padding: 0.2em;
+}
+
+.menu__item--image {
+  height: 10vh;
+  width: 12vh;
 }
