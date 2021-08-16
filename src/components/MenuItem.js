@@ -13,10 +13,12 @@ export default function MenuItem({ item }) {
           alt={item.name}
           className="menu__item--image"
         />
-        <p>{item.type}</p>
-        <p>{item.name}</p>
-        <p>{item.description}</p>
-        <p>{item.price / 100}</p>
+        <p>
+          {item.type}
+          {item.name}
+          {item.description}
+        </p>
+        <p className="menu__item--price">{item.price / 100}</p>
       </div>
       <div className="menu__counter">
         <BiPlus className="menu__counter--button" onClick={increment} />
