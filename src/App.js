@@ -19,7 +19,7 @@ function App() {
       .catch((error) => {
         console.error(error);
       });
-  });
+  }, []);
 
   return (
     <Div100vh className="App">

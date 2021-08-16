@@ -7,6 +7,7 @@ export default function MenuItem({ item }) {
 
   return (
     <div className="menu__item">
+      <img src={`/images/menu/${item.id}.jpg`} alt={item.name} />
       <p>{item.type}</p>
       <p>{item.name}</p>
       <p>{item.description}</p>

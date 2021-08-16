@@ -19,9 +19,14 @@ export default function Order() {
     },
   ]);
 
-  return order.map((orderItem) => {
-    return <OrderItem orderItem={orderItem} key={orderItem.id} />;
-  });
+  return order
+    .map((orderItem) => {
+      return <OrderItem orderItem={orderItem} key={orderItem.id} />;
+    })
+    .filter((nameById) => {
+      console.log(nameById);
+      return nameById;
+    });
 
   // /* <p>
   //   I want dish 1 <BiX className="order__item--delete" />
