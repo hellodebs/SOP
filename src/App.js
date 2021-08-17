@@ -40,11 +40,11 @@ function App() {
   }, []);
 
   function deleteButtonHandler(id) {
-    const deletedItems = items.filter((deletedItem) => {
+    const deletedItems = order.filter((deletedItem) => {
+      console.log(deletedItems);
       return id !== deletedItem.id;
     });
     setItems(deletedItems);
-    console.log(deletedItems);
   }
 
   return (
@@ -79,6 +79,9 @@ function App() {
               deleteButtonHandler={deleteButtonHandler}
               order={order}
             />
+            <button type="submit" className="App__item--confirm-button">
+              Confirm order
+            </button>
           </Route>
           <Route path="/bill">
             <Bill />
