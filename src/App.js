@@ -10,7 +10,7 @@ import Div100vh from "react-div-100vh";
 
 function App() {
   const [items, setItems] = useState([]);
-  const order = [
+  const [order, setOrder] = useState([
     {
       id: 5,
       quantity: 3,
@@ -27,7 +27,7 @@ function App() {
       id: 11,
       quantity: 1,
     },
-  ];
+  ]);
 
   useEffect(() => {
     const url = "/api/menu.json";
@@ -41,10 +41,10 @@ function App() {
 
   function deleteButtonHandler(id) {
     const deletedItems = order.filter((deletedItem) => {
-      console.log(deletedItems);
       return id !== deletedItem.id;
     });
-    setItems(deletedItems);
+    setOrder(deletedItems);
+    console.log(deletedItems);
   }
 
   return (

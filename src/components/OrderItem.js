@@ -15,7 +15,10 @@ export default function OrderItem({ orderItem, deleteButtonHandler }) {
           <p>Name: {orderItem.name}</p>
           <p>Quantity: {orderItem.quantity}</p>
         </div>
-        <p onClick={deleteButtonHandler} className="order__item--delete">
+        <p
+          onClick={() => deleteButtonHandler(orderItem.id)}
+          className="order__item--delete"
+        >
           <BiX />
         </p>
       </div>
