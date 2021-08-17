@@ -1,4 +1,5 @@
 import OrderItem from "../components/OrderItem";
+import "./Order.css";
 
 export default function Order({ items, order, deleteButtonHandler }) {
   return order.map((orderItem) => {
@@ -7,11 +8,16 @@ export default function Order({ items, order, deleteButtonHandler }) {
     });
     orderItem = { ...orderItem, ...menuItem[0] };
     return (
-      <OrderItem
-        deleteButtonHandler={deleteButtonHandler}
-        orderItem={orderItem}
-        key={orderItem.id}
-      />
+      <>
+        <OrderItem
+          deleteButtonHandler={deleteButtonHandler}
+          orderItem={orderItem}
+          key={orderItem.id}
+        />
+        <button type="submit" className="order__confirm-button">
+          Confirm order
+        </button>
+      </>
     );
   });
 }

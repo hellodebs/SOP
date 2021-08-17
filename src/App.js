@@ -85,9 +85,6 @@ function App() {
               deleteButtonHandler={deleteButtonHandler}
               order={order}
             />
-            <button type="submit" className="App__item--confirm-button">
-              Confirm order
-            </button>
           </Route>
           <Route path="/bill">
             <Bill />
