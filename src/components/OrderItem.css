@@ -31,4 +31,5 @@
 .order__item--image {
   height: 13vh;
   width: 13vh;
+  border-radius: 5px;
 }

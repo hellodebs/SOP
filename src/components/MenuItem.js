@@ -4,15 +4,17 @@ import { BiMinus, BiPlus } from "react-icons/bi";
 
 export default function MenuItem({ item }) {
   const [count, increment, decrement] = useCount();
-
+  const image = (
+    <img
+      src={`/images/menu/${item.id}.jpg`}
+      alt={item.name}
+      className="menu__item--image"
+    />
+  );
   return (
     <section className="menu__item">
       <div className="menu__item--content">
-        <img
-          src={`/images/menu/${item.id}.jpg`}
-          alt={item.name}
-          className="menu__item--image"
-        />
+        {image}
         <div>
           <p className="menu__item--type">{item.type}</p>
           <p>{item.name}</p>

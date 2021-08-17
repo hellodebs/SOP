@@ -1,21 +1,6 @@
 import OrderItem from "../components/OrderItem";
 
-export default function Order({ items }) {
-  const order = [
-    {
-      id: 5,
-      quantity: 3,
-    },
-    {
-      id: 9,
-      quantity: 3,
-    },
-    {
-      id: 11,
-      quantity: 1,
-    },
-  ];
-
+export default function Order({ items, order }) {
   return order.map((orderItem) => {
     const menuItem = items.filter((item) => {
       return item.id === orderItem.id;
