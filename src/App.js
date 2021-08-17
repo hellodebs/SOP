@@ -44,7 +44,6 @@ function App() {
       return id !== deletedItem.id;
     });
     setOrder(deletedItems);
-    console.log(deletedItems);
   }
 
   return (
