@@ -21,6 +21,21 @@ function App() {
       });
   }, []);
 
+  function deleteButtonHandler(id) {
+    const deletedItems = order.filter((deletedItem) => {
+      return id !== deletedItem.id;
+    });
+    setOrder(deletedItems);
+  }
+
+  function addButtonHandler(id) {
+    const addItems = items.map((addItem) => {
+      return id === addItem.id;
+    });
+    setItems(addItems);
+    console.log(addItems);
+  }
+
   return (
     <Div100vh className="App">
       <header className="App__header">
@@ -48,7 +63,15 @@ function App() {
             <Menu items={items} />
           </Route>
           <Route path="/order">
-            <Order items={items} />
+            <Order
+              items={items}
+              deleteButtonHandler={deleteButtonHandler}
+              order={order}
+              addButtonHandler={addButtonHandler}
+            />
+            <button type="submit" className="App__item--confirm-button">
+              Confirm order
+            </button>
           </Route>
           <Route path="/bill">
             <Bill />
