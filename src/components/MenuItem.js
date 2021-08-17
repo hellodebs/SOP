@@ -16,8 +16,8 @@ export default function MenuItem({ item }) {
       <div className="menu__item--content">
         {image}
         <div>
-          <p className="menu__item--type">{item.type}</p>
-          <p>{item.name}</p>
+          <h3 className="menu__item--type">{item.type}</h3>
+          <h2>{item.name}</h2>
           <p>{item.description}</p>
         </div>
         <p className="menu__item--price">{item.price / 100}</p>
