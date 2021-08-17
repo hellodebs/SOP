@@ -1,15 +1,12 @@
 import "./OrderItem.css";
 import { BiX } from "react-icons/bi";
+import ItemImage from "./ItemImage";
 
 export default function OrderItem({ orderItem, deleteButtonHandler }) {
   return (
     <section className="order__item">
       <div className="order__item--content">
-        <img
-          src={`/images/menu/${orderItem.id}.jpg`}
-          alt={orderItem.name}
-          className="order__item--image"
-        />
+        <ItemImage item={orderItem} />
         <div>
           <p>Id: {orderItem.id}</p>
           <p>Name: {orderItem.name}</p>

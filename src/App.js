@@ -10,24 +10,7 @@ import Div100vh from "react-div-100vh";
 
 function App() {
   const [items, setItems] = useState([]);
-  const [order, setOrder] = useState([
-    {
-      id: 5,
-      quantity: 3,
-    },
-    {
-      id: 6,
-      quantity: 2,
-    },
-    {
-      id: 9,
-      quantity: 3,
-    },
-    {
-      id: 11,
-      quantity: 1,
-    },
-  ]);
+  const [order, setOrder] = useState([]);
 
   useEffect(() => {
     const url = "/api/menu.json";
@@ -46,12 +29,28 @@ function App() {
     setOrder(deletedItems);
   }
 
-  function addButtonHandler(id) {
-    const addItems = items.map((addItem) => {
-      return id === addItem.id;
+  function updateItemQuantity(itemId, quantity) {
+    const filteredOrder = order.filter((orderItem) => {
+      return itemId === orderItem.id;
     });
-    setItems(addItems);
-    console.log(addItems);
+    if (filteredOrder.length === 0) {
+      //add item, because Id doesnt exist.
+      const updatedOrder = order;
+      updatedOrder.push({
+        id: itemId,
+        quantity: quantity,
+      });
+      setOrder(updatedOrder);
+    } else {
+      //itemId exists in order already, so quantity can be updated
+      const updatedOrder = order.map((orderItem) => {
+        if (itemId === orderItem.id) {
+          orderItem.quantity = quantity;
+        }
+        return orderItem;
+      });
+      setOrder(updatedOrder);
+    }
   }
 
   return (
@@ -78,7 +77,7 @@ function App() {
       <main className="App__main">
         <Switch>
           <Route path="/menu">
-            <Menu items={items} />
+            <Menu items={items} updateItemQuantity={updateItemQuantity} />
           </Route>
           <Route path="/order">
             <Order
