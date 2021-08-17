@@ -10,6 +10,24 @@ import Div100vh from "react-div-100vh";
 
 function App() {
   const [items, setItems] = useState([]);
+  const [order, setOrder] = useState([
+    {
+      id: 5,
+      quantity: 3,
+    },
+    {
+      id: 6,
+      quantity: 2,
+    },
+    {
+      id: 9,
+      quantity: 3,
+    },
+    {
+      id: 11,
+      quantity: 1,
+    },
+  ]);
 
   useEffect(() => {
     const url = "/api/menu.json";
@@ -67,7 +85,6 @@ function App() {
               items={items}
               deleteButtonHandler={deleteButtonHandler}
               order={order}
-              addButtonHandler={addButtonHandler}
             />
             <button type="submit" className="App__item--confirm-button">
               Confirm order

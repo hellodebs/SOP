@@ -1,3 +1,5 @@
+@import "../styles/_color.css";
+
 .Navigation__nav {
   display: flex;
   justify-content: space-around;
@@ -12,9 +14,9 @@
 }
 
 .Navigation__navlink {
-  color: gray;
+  color: var(--Navigation-navlink-inactive);
 }
 
 .Navigation__navlink--active {
-  color: black;
+  color: var(--Navigation-navlink-active);
 }

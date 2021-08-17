@@ -1,3 +1,5 @@
+@import "../styles/_color.css";
+
 .menu__item {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
@@ -9,6 +11,11 @@
 .menu__item--content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.menu__item--type {
+  font-weight: bold;
 }
 
 .menu__item--price {
@@ -19,7 +26,7 @@
 
 .menu__counter--button {
   border: none;
-  background-color: white;
+  background-color: var(--button-bg);
   font-size: 1.2rem;
 }
 
@@ -33,6 +40,7 @@
 }
 
 .menu__item--image {
-  height: 10vh;
-  width: 12vh;
+  height: 13vh;
+  width: 13vh;
+  border-radius: 5px;
 }
