@@ -1,7 +1,8 @@
 import OrderItem from "../components/OrderItem";
+import "./Order.css";
 
 export default function Order({ items, order, deleteButtonHandler }) {
-  return order.map((orderItem) => {
+  const orderItems = order.map((orderItem) => {
     const menuItem = items.filter((item) => {
       return item.id === orderItem.id;
     });
@@ -14,4 +15,13 @@ export default function Order({ items, order, deleteButtonHandler }) {
       />
     );
   });
+
+  return (
+    <>
+      {orderItems}
+      <button type="submit" className="order__confirm-button">
+        Confirm order
+      </button>
+    </>
+  );
 }

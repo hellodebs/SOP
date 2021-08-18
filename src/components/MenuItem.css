@@ -38,9 +38,3 @@
   font-size: 1.3rem;
   padding: 0.2em;
 }
-
-.menu__item--image {
-  height: 13vh;
-  width: 13vh;
-  border-radius: 5px;
-}
