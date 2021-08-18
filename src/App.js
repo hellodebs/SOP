@@ -34,7 +34,7 @@ function App() {
       return itemId === orderItem.id;
     });
     if (filteredOrder.length === 0) {
-      //add item, because Id doesnt exist.
+      //add item, because Id doesnt exist in order
       const updatedOrder = order;
       updatedOrder.push({
         id: itemId,
@@ -49,6 +49,9 @@ function App() {
         }
         return orderItem;
       });
+      //remove item from order page if quantity was set to 0
+      if (quantity === 0) {
+      }
       setOrder(updatedOrder);
     }
   }

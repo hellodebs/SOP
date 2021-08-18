@@ -15,7 +15,7 @@ export default function MenuItem({ item, updateItemQuantity }) {
           <h2>{item.name}</h2>
           <p>{item.description}</p>
         </div>
-        <p className="menu__item--price">{item.price / 100}</p>
+        <p className="menu__item--price">{item.price / 100}€</p>
       </div>
       <div className="menu__counter">
         <BiPlus className="menu__counter--button" onClick={increment} />
