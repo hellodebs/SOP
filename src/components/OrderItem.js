@@ -11,7 +11,7 @@ export default function OrderItem({ orderItem, deleteButtonHandler }) {
           <p># {orderItem.id}</p>
           <h3>{orderItem.name}</h3>
           <p>Quantity: {orderItem.quantity}</p>
-          <p>Price: {orderItem.price / 100} € </p>
+          <p>Price: {(orderItem.price / 100) * orderItem.quantity} €</p>
         </div>
         <p
           onClick={() => deleteButtonHandler(orderItem.id)}

@@ -15,7 +15,6 @@ export default function Order({ items, order, deleteButtonHandler }) {
       />
     );
   });
-
   return (
     <>
       {orderItems}

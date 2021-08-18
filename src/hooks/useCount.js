@@ -4,8 +4,10 @@ export default function useCount(itemId, updateItemQuantity) {
   const [count, setCount] = useState(0);
 
   function increment() {
-    setCount(count + 1);
-    updateItemQuantity(itemId, count + 1);
+    if (count < 15) {
+      setCount(count + 1);
+      updateItemQuantity(itemId, count + 1);
+    }
   }
 
   function decrement() {
