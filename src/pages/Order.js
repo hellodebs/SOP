@@ -1,13 +1,12 @@
 import OrderItem from "../components/OrderItem";
 import "./Order.css";
 
-export default function Order({ items, order, deleteButtonHandler }) {
+export default function Order({ items, deleteButtonHandler }) {
   let total = 0;
-  const orderItems = order.map((orderItem) => {
-    const menuItem = items.filter((item) => {
-      return item.id === orderItem.id;
-    });
-    orderItem = { ...orderItem, ...menuItem[0] };
+  let orderItems = items.filter((item) => {
+    return item.quantity > 0;
+  });
+  orderItems = orderItems.map((orderItem) => {
     total = total + orderItem.price * orderItem.quantity;
     return (
       <OrderItem
@@ -22,7 +21,7 @@ export default function Order({ items, order, deleteButtonHandler }) {
     <>
       {orderItems}
       <button type="submit" className="order__confirm-button">
-        Confirm order ({total / 100} €)
+        Confirm order (Total: {total / 100} €)
       </button>
     </>
   );

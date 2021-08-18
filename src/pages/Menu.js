@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import MenuItem from "../components/MenuItem";
 
 export default function Menu({ items, updateItemQuantity }) {

@@ -10,47 +10,35 @@ import Div100vh from "react-div-100vh";
 
 function App() {
   const [items, setItems] = useState([]);
-  const [order, setOrder] = useState([]);
 
   useEffect(() => {
     const url = "/api/menu.json";
     fetch(url)
       .then((res) => res.json())
-      .then((data) => setItems(data.items))
+      .then((data) => {
+        data.items = data.items.map((item) => {
+          item.quantity = 0;
+          return item;
+        });
+        setItems(data.items);
+      })
       .catch((error) => {
         console.error(error);
       });
   }, []);
 
   function deleteButtonHandler(id) {
-    const deletedItems = order.filter((deletedItem) => {
-      return id !== deletedItem.id;
-    });
-    setOrder(deletedItems);
+    updateItemQuantity(id, 0);
   }
 
   function updateItemQuantity(itemId, quantity) {
-    const filteredOrder = order.filter((orderItem) => {
-      return itemId === orderItem.id;
+    const updatedItems = items.map((item) => {
+      if (itemId === item.id) {
+        item.quantity = quantity;
+      }
+      return item;
     });
-    if (filteredOrder.length === 0) {
-      //add item, because Id doesnt exist in order
-      const updatedOrder = order;
-      updatedOrder.push({
-        id: itemId,
-        quantity: quantity,
-      });
-      setOrder(updatedOrder);
-    } else {
-      //itemId exists in order already, so quantity can be updated
-      const updatedOrder = order.map((orderItem) => {
-        if (itemId === orderItem.id) {
-          orderItem.quantity = quantity;
-        }
-        return orderItem;
-      });
-      setOrder(updatedOrder);
-    }
+    setItems(updatedItems);
   }
 
   return (
@@ -80,11 +68,7 @@ function App() {
             <Menu items={items} updateItemQuantity={updateItemQuantity} />
           </Route>
           <Route path="/order">
-            <Order
-              items={items}
-              deleteButtonHandler={deleteButtonHandler}
-              order={order}
-            />
+            <Order items={items} deleteButtonHandler={deleteButtonHandler} />
           </Route>
           <Route path="/bill">
             <Bill />
