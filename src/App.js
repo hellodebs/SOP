@@ -49,9 +49,6 @@ function App() {
         }
         return orderItem;
       });
-      //remove item from order page if quantity was set to 0
-      if (quantity === 0) {
-      }
       setOrder(updatedOrder);
     }
   }
