@@ -8,9 +8,10 @@ export default function OrderItem({ orderItem, deleteButtonHandler }) {
       <div className="order__item--content">
         <ItemImage item={orderItem} />
         <div>
-          <p>Id: {orderItem.id}</p>
-          <p>Name: {orderItem.name}</p>
+          <p># {orderItem.id}</p>
+          <h3>{orderItem.name}</h3>
           <p>Quantity: {orderItem.quantity}</p>
+          <p>Price: {orderItem.price / 100} € </p>
         </div>
         <p
           onClick={() => deleteButtonHandler(orderItem.id)}
