@@ -45,3 +45,13 @@
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
 }
+
+.App__service--icon {
+  font-size: 2.3rem;
+  position: fixed;
+  bottom: 1.9em;
+  right: 0.8em;
+  background-color: var(--button-bg);
+  border: 0.1px solid var(--navigation-navlink-active);
+  border-radius: 50%;
+}

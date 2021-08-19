@@ -1,6 +1,7 @@
 import "./App.css";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { BiUser } from "react-icons/bi";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order.js";
 import Bill from "./pages/Bill.js";
@@ -10,6 +11,7 @@ import Div100vh from "react-div-100vh";
 
 function App() {
   const [items, setItems] = useState([]);
+  let history = useHistory();
 
   useEffect(() => {
     const url = "/api/menu.json";
@@ -39,6 +41,12 @@ function App() {
       return item;
     });
     setItems(updatedItems);
+  }
+
+  function confirmAlert() {
+    if (window.confirm("Would you like to speak to one member of our team?")) {
+      history.push("/service");
+    }
   }
 
   return (
@@ -77,6 +85,9 @@ function App() {
             <Service />
           </Route>
         </Switch>
+        <button onClick={confirmAlert} className="navigation__button">
+          <BiUser className="App__service--icon" />
+        </button>
       </main>
       <footer className="App__footer">
         <Navigation />
