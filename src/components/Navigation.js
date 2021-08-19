@@ -1,7 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 import { BiFoodMenu, BiMoney, BiCart } from "react-icons/bi";
-import { IoHelpBuoyOutline } from "react-icons/io5";
 
 export default function Navigation({ confirmAlert }) {
   return (
