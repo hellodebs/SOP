@@ -11,7 +11,7 @@ import Div100vh from "react-div-100vh";
 
 function App() {
   const [items, setItems] = useState([]);
-  let history = useHistory();
+  const history = useHistory();
 
   useEffect(() => {
     const url = "/api/menu.json";
