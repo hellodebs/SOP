@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 import { BiFoodMenu, BiMoney, BiCart } from "react-icons/bi";
 
-export default function Navigation({ confirmAlert }) {
+export default function Navigation() {
   return (
     <nav className="navigation__nav">
       <NavLink
