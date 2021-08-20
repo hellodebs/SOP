@@ -30,10 +30,10 @@ function App() {
   }, []);
 
   function deleteButtonHandler(id) {
-    updateItemQuantity(id, 0);
+    updateQuantity(id, 0);
   }
 
-  function updateItemQuantity(itemId, quantity) {
+  function updateQuantity(itemId, quantity) {
     const updatedItems = items.map((item) => {
       if (itemId === item.id) {
         item.quantity = quantity;
@@ -73,7 +73,7 @@ function App() {
       <main className="App__main">
         <Switch>
           <Route path="/menu">
-            <Menu items={items} onUpdateQuantity={updateItemQuantity} />
+            <Menu items={items} onUpdateQuantity={updateQuantity} />
           </Route>
           <Route path="/order">
             <Order items={items} onDeleteButton={deleteButtonHandler} />
