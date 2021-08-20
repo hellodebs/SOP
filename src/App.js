@@ -76,7 +76,7 @@ function App() {
             <Menu items={items} onUpdateQuantity={updateItemQuantity} />
           </Route>
           <Route path="/order">
-            <Order items={items} deleteButtonHandler={deleteButtonHandler} />
+            <Order items={items} onDeleteButton={deleteButtonHandler} />
           </Route>
           <Route path="/bill">
             <Bill />

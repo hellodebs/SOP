@@ -10,7 +10,7 @@ export default function Order({ items, deleteButtonHandler }) {
     total = total + orderItem.price * orderItem.quantity;
     return (
       <OrderItem
-        deleteButtonHandler={deleteButtonHandler}
+        onDeleteButton={deleteButtonHandler}
         orderItem={orderItem}
         key={orderItem.id}
       />
