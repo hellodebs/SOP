@@ -10,7 +10,8 @@ import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";
 
 function App() {
-  const [items, setItems] = useState([]);
+  const [menuItems, setMenuItems] = useState([]);
+
   const history = useHistory();
 
   useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
           item.quantity = 0;
           return item;
         });
-        setItems(data.items);
+        setMenuItems(data.items);
       })
       .catch((error) => {
         console.error(error);
@@ -34,13 +35,13 @@ function App() {
   }
 
   function updateQuantity(itemId, quantity) {
-    const updatedItems = items.map((item) => {
+    const updatedItems = menuItems.map((item) => {
       if (itemId === item.id) {
         item.quantity = quantity;
       }
       return item;
     });
-    setItems(updatedItems);
+    setMenuItems(updatedItems);
   }
 
   function confirmAlert() {
@@ -73,10 +74,10 @@ function App() {
       <main className="App__main">
         <Switch>
           <Route path="/menu">
-            <Menu items={items} onUpdateQuantity={updateQuantity} />
+            <Menu menuItems={menuItems} onUpdateQuantity={updateQuantity} />
           </Route>
           <Route path="/order">
-            <Order items={items} onDeleteButton={deleteButtonHandler} />
+            <Order menuItems={menuItems} onDeleteButton={deleteButtonHandler} />
           </Route>
           <Route path="/bill">
             <Bill />
