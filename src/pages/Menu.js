@@ -6,7 +6,7 @@ export default function Menu({ items, updateItemQuantity }) {
       <MenuItem
         key={item.id}
         item={item}
-        updateItemQuantity={updateItemQuantity}
+        onUpdateQuantity={updateItemQuantity}
       />
     );
   });

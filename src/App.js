@@ -73,7 +73,7 @@ function App() {
       <main className="App__main">
         <Switch>
           <Route path="/menu">
-            <Menu items={items} updateItemQuantity={updateItemQuantity} />
+            <Menu items={items} onUpdateQuantity={updateItemQuantity} />
           </Route>
           <Route path="/order">
             <Order items={items} deleteButtonHandler={deleteButtonHandler} />
