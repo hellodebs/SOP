@@ -10,7 +10,8 @@ import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";
 
 function App() {
-  const [menuItems, setMenuItems] = useState([]);
+  const [menu, setMenu] = useState([]);
+  const [order, setOrder] = useState([]);
 
   const history = useHistory();
 
@@ -23,7 +24,7 @@ function App() {
           item.quantity = 0;
           return item;
         });
-        setMenuItems(data.items);
+        setMenu(data.items);
       })
       .catch((error) => {
         console.error(error);
@@ -35,13 +36,36 @@ function App() {
   }
 
   function updateQuantity(itemId, quantity) {
-    const updatedItems = menuItems.map((item) => {
-      if (itemId === item.id) {
-        item.quantity = quantity;
-      }
-      return item;
+    const filteredOrder = order.filter((orderItem) => {
+      return itemId === orderItem.id;
     });
-    setMenuItems(updatedItems);
+    if (filteredOrder.length === 0) {
+      //add item, because id doesnt exist with push()
+      const updatedOrder = order;
+      updatedOrder.push({
+        id: itemId,
+        quantity: quantity,
+      });
+      setOrder(updatedOrder);
+    } else {
+      //if id already exists...
+      if (quantity === 0) {
+        //remove item from list with filter()
+        const updatedOrder = order.filter((item) => {
+          return itemId !== item.id;
+        });
+        setOrder(updatedOrder);
+      } else {
+        //...update quantity
+        const updatedOrder = order.map((item) => {
+          if (itemId === item.id) {
+            item.quantity = quantity;
+          }
+          return item;
+        });
+        setOrder(updatedOrder);
+      }
+    }
   }
 
   function confirmAlert() {
@@ -74,10 +98,10 @@ function App() {
       <main className="App__main">
         <Switch>
           <Route path="/menu">
-            <Menu menuItems={menuItems} onUpdateQuantity={updateQuantity} />
+            <Menu order={order} menu={menu} onUpdateQuantity={updateQuantity} />
           </Route>
           <Route path="/order">
-            <Order menuItems={menuItems} onDeleteButton={deleteButtonHandler} />
+            <Order menu={menu} onDeleteButton={deleteButtonHandler} />
           </Route>
           <Route path="/bill">
             <Bill />

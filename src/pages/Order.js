@@ -1,9 +1,9 @@
 import OrderItem from "../components/OrderItem";
 import "./Order.css";
 
-export default function Order({ menuItems, onDeleteButton: deleteItem }) {
+export default function Order({ menu, onDeleteButton: deleteItem }) {
   let total = 0;
-  let orderItems = menuItems.filter((item) => {
+  let orderItems = menu.filter((item) => {
     return item.quantity > 0;
   });
   orderItems = orderItems.map((orderItem) => {
