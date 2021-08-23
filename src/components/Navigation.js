@@ -1,39 +1,36 @@
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
 import { BiFoodMenu, BiMoney, BiCart } from "react-icons/bi";
-import { IoHelpBuoyOutline } from "react-icons/io5";
 
 export default function Navigation() {
   return (
-    <nav className="Navigation__nav">
+    <nav className="navigation__nav">
       <NavLink
-        className="Navigation__navlink"
-        activeClassName="Navigation__navlink--active"
+        className="navigation__navlink"
+        activeClassName="navigation__navlink--active"
         to="/menu"
       >
-        <BiFoodMenu className="Navigation__icon" />
+        <BiFoodMenu className="navigation__icon" />
       </NavLink>
       <NavLink
-        className="Navigation__navlink"
-        activeClassName="Navigation__navlink--active"
+        className="navigation__navlink"
+        activeClassName="navigation__navlink--active"
         to="/order"
       >
-        <BiCart className="Navigation__icon" />
+        <BiCart className="navigation__icon" />
       </NavLink>
       <NavLink
-        className="Navigation__navlink"
-        activeClassName="Navigation__navlink--active"
+        className="navigation__navlink"
+        activeClassName="navigation__navlink--active"
         to="/bill"
       >
-        <BiMoney className="Navigation__icon" />
+        <BiMoney className="navigation__icon" />
       </NavLink>
       <NavLink
-        className="Navigation__navlink"
-        activeClassName="Navigation__navlink--active"
+        className="navigation__navlink navigation__service"
+        activeClassName="navigation__navlink--active"
         to="/service"
-      >
-        <IoHelpBuoyOutline className="Navigation__icon" />
-      </NavLink>
+      ></NavLink>
     </nav>
   );
 }

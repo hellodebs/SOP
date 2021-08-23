@@ -1,16 +1,16 @@
 import OrderItem from "../components/OrderItem";
 import "./Order.css";
 
-export default function Order({ items, deleteButtonHandler }) {
+export default function Order({ menuItems, onDeleteButton: deleteItem }) {
   let total = 0;
-  let orderItems = items.filter((item) => {
+  let orderItems = menuItems.filter((item) => {
     return item.quantity > 0;
   });
   orderItems = orderItems.map((orderItem) => {
     total = total + orderItem.price * orderItem.quantity;
     return (
       <OrderItem
-        deleteButtonHandler={deleteButtonHandler}
+        onDeleteButton={deleteItem}
         orderItem={orderItem}
         key={orderItem.id}
       />

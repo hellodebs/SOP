@@ -1,22 +1,31 @@
 @import "../styles/_color.css";
 
-.Navigation__nav {
+.navigation__nav {
   display: flex;
   justify-content: space-around;
 }
 
-.Navigation__navlink {
+.navigation__navlink {
   text-decoration: none;
 }
 
-.Navigation__icon {
+.navigation__icon {
   font-size: 1.5rem;
 }
 
-.Navigation__navlink {
-  color: var(--Navigation-navlink-inactive);
+.navigation__navlink {
+  color: var(--navigation-navlink-inactive);
 }
 
-.Navigation__navlink--active {
-  color: var(--Navigation-navlink-active);
+.navigation__navlink--active {
+  color: var(--navigation-navlink-active);
+}
+
+.navigation__button {
+  border: none;
+  background-color: white;
+}
+
+.navigation__service {
+  display: none;
 }

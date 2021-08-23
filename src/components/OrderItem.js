@@ -2,7 +2,7 @@ import "./OrderItem.css";
 import { BiX } from "react-icons/bi";
 import ItemImage from "./ItemImage";
 
-export default function OrderItem({ orderItem, deleteButtonHandler }) {
+export default function OrderItem({ orderItem, onDeleteButton: deleteItem }) {
   return (
     <section className="order__item">
       <div className="order__item--content">
@@ -14,7 +14,7 @@ export default function OrderItem({ orderItem, deleteButtonHandler }) {
           <p>Price: {orderItem.price / 100} €</p>
         </div>
         <button
-          onClick={() => deleteButtonHandler(orderItem.id)}
+          onClick={() => deleteItem(orderItem.id)}
           className="order__item--delete"
         >
           <BiX />
