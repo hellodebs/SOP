@@ -13,7 +13,7 @@ function App() {
   const [menu, setMenu] = useState([]);
   const [order, setOrder] = useState([]);
 
-  const history = useHistory();
+  let history = useHistory();
 
   useEffect(() => {
     const url = "/api/menu.json";
