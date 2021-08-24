@@ -2,6 +2,7 @@ import "./App.css";
 import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { BiUser } from "react-icons/bi";
+import usePersistedState from "./hooks/usePersistedState";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order.js";
 import Bill from "./pages/Bill.js";
@@ -11,7 +12,7 @@ import Div100vh from "react-div-100vh";
 
 function App() {
   const [menu, setMenu] = useState([]);
-  const [order, setOrder] = useState([]);
+  const [order, setOrder] = usePersistedState("order", []);
 
   let history = useHistory();
 
@@ -20,10 +21,6 @@ function App() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        data.items = data.items.map((item) => {
-          item.quantity = 0;
-          return item;
-        });
         setMenu(data.items);
       })
       .catch((error) => {
@@ -41,11 +38,14 @@ function App() {
     });
     if (filteredOrder.length === 0) {
       //add item, because id doesnt exist with push()
-      const updatedOrder = order;
-      updatedOrder.push({
-        id: itemId,
-        quantity: quantity,
-      });
+      const updatedOrder = [
+        ...order,
+        {
+          id: itemId,
+          quantity: quantity,
+        },
+      ];
+
       setOrder(updatedOrder);
     } else {
       //if id already exists...
@@ -101,7 +101,11 @@ function App() {
             <Menu order={order} menu={menu} onUpdateQuantity={updateQuantity} />
           </Route>
           <Route path="/order">
-            <Order menu={menu} onDeleteButton={deleteButtonHandler} />
+            <Order
+              order={order}
+              menu={menu}
+              onDeleteButton={deleteButtonHandler}
+            />
           </Route>
           <Route path="/bill">
             <Bill />
