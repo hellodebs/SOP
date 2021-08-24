@@ -1,12 +1,17 @@
 import OrderItem from "../components/OrderItem";
+
 import "./Order.css";
 
-export default function Order({ menuItems, onDeleteButton: deleteItem }) {
+export default function Order({ menu, order, onDeleteButton: deleteItem }) {
   let total = 0;
-  let orderItems = menuItems.filter((item) => {
-    return item.quantity > 0;
-  });
-  orderItems = orderItems.map((orderItem) => {
+  const orderItems = order.map((orderItem) => {
+    const filteredMenuItem = menu.filter((item) => {
+      return orderItem.id === item.id;
+    });
+    orderItem = {
+      ...filteredMenuItem[0],
+      ...orderItem,
+    };
     total = total + orderItem.price * orderItem.quantity;
     return (
       <OrderItem
