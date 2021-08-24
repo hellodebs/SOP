@@ -37,7 +37,7 @@ function App() {
       return itemId === orderItem.id;
     });
     if (filteredOrder.length === 0) {
-      //add item, because id doesnt exist with push()
+      //add item, because id doesnt exist
       const updatedOrder = [
         ...order,
         {
