@@ -6,7 +6,7 @@
       "type": "Starter",
       "name": "Mandu",
       "description": "Steamed dumplings with seafood filling",
-      "price": 800
+      "price": 390
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "type": "Starter",
       "name": "Summer Rolls",
       "description": "Various fillings in rice paper",
-      "price": 890
+      "price": 450
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "type": "Main",
       "name": "Tteokbbokki",
       "description": "Hot spicy ricecake with fishcake and vegetable",
-      "price": 1150
+      "price": 890
     },
 
     {
@@ -31,7 +31,7 @@
       "type": "Main",
       "name": "Curry Rice",
       "description": "White rice with spicy curry and vegetables",
-      "price": 1200
+      "price": 800
     },
     {
       "id": 5,
@@ -39,7 +39,7 @@
       "type": "Main",
       "name": "Bulgogi",
       "description": "Stir fried beef sclices with vegetables. Served with white rice.",
-      "price": 800
+      "price": 950
     },
     {
       "id": 6,
@@ -67,7 +67,7 @@
       "id": 9,
       "type": "Non alcoholic drinks",
       "name": "Water sparkling/still 0,75L",
-      "price": 530
+      "price": 490
     },
     {
       "id": 10,
