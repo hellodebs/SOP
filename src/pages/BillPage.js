@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 export default function BillPage() {
   const [bill, setBill] = useState({});
 
+  const total = bill.items
+    ?.reduce(
+      (previousValue, currentValue) =>
+        previousValue + (currentValue.price / 100) * currentValue.quantity,
+      0
+    )
+    .toFixed(2);
+
   useEffect(() => {
     const url = "/api/bill.json";
     fetch(url)
@@ -23,19 +31,25 @@ export default function BillPage() {
   return (
     <>
       <section className="bill__item">
-        <h3>Name of Restaurant</h3>
-        <h4>Nameofstr. 1</h4>
-        <h4>12345 City</h4>
-        <p>#receiptnumber 01.01.2022 21:53h</p>
+        <h3>{bill.name}</h3>
+        <h4>
+          {bill.streetname}
+          <br />
+          {bill.postalcode}
+        </h4>
+        <p>
+          {bill.id}
+          {bill.date}
+          {bill.time}
+        </p>
         {billItems}
         <div className="bill__item--total">
-          <h2>TOTAL: 102.80 € </h2>
+          <h2>{total}</h2>
         </div>
       </section>
       <button type="submit" className="bill__confirm-button">
         I want to pay please
       </button>
-      ;
     </>
   );
 }
