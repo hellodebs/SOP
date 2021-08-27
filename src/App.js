@@ -5,7 +5,7 @@ import { BiUser } from "react-icons/bi";
 import usePersistedState from "./hooks/usePersistedState";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order.js";
-import Bill from "./pages/Bill.js";
+import Bill from "./pages/BillPage.js";
 import Service from "./pages/Service.js";
 import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";

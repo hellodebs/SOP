@@ -1,5 +1,3 @@
-@import "../src/styles/_color.css";
-
 *,
 ::before,
 ::after {
@@ -47,11 +45,14 @@
 }
 
 .App__service--icon {
-  font-size: 2.3rem;
+  font-size: 3rem;
   position: fixed;
-  bottom: 1.9em;
-  right: 0.8em;
+  bottom: 1.6em;
+  right: 0.3em;
+  padding: 0.2em;
   background-color: var(--button-bg);
-  border: 0.1px solid var(--navigation-navlink-active);
   border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
