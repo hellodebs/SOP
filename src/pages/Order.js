@@ -25,6 +25,8 @@ export default function Order({ menu, order, onDeleteButton: deleteItem }) {
   return (
     <>
       {orderItems}
+
+      {/* After clicking confirm, I want the Order page to be empty but the billPage to be updated  */}
       <button type="submit" className="order__confirm-button">
         Confirm order (Total: {total / 100} €)
       </button>
