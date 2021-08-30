@@ -31,13 +31,12 @@ export default function Order({
     <>
       {orderItems}
 
-      {/* After clicking confirm, I want the Order page to be empty but the billPage to be updated  */}
+      {/* After clicking confirm, I want the Order page to be empty but the billPage to be updated. A confirmatino text should also appear.  */}
+
       <button
         type="submit"
         className="order__confirm-button"
-        onClick={() => {
-          confirmButton();
-        }}
+        onClick={confirmButton}
       >
         Confirm order (Total: {total / 100} €)
       </button>

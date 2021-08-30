@@ -26,11 +26,6 @@ export default function Navigation() {
       >
         <BiMoney className="navigation__icon" />
       </NavLink>
-      <NavLink
-        className="navigation__navlink navigation__service"
-        activeClassName="navigation__navlink--active"
-        to="/service"
-      ></NavLink>
     </nav>
   );
 }

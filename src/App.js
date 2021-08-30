@@ -7,6 +7,8 @@ import Menu from "./pages/Menu";
 import Order from "./pages/Order.js";
 import Bill from "./pages/BillPage.js";
 import ConfirmServiceText from "./pages/ConfirmServiceText.js";
+import ConfirmOrderText from "./pages/ConfirmOrderText";
+
 import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";
 
@@ -74,7 +76,11 @@ function App() {
     }
   }
 
-  function confirmButtonHandler() {}
+  function confirmButtonHandler() {
+    if (window.confirm("Would you like to confirm your order?")) {
+      history.push("/ConfirmOrderText");
+    }
+  }
 
   return (
     <Div100vh className="App">
@@ -91,6 +97,9 @@ function App() {
           </Route>
           <Route path="/ConfirmServiceText">
             <h2 className="App__heading">Service</h2>
+          </Route>
+          <Route path="/ConfirmOrderText">
+            <h2 className="App__heading">Order confirmed</h2>
           </Route>
           <Route path="/">
             <Redirect to="/menu" />
@@ -115,6 +124,9 @@ function App() {
           </Route>
           <Route path="/ConfirmServiceText">
             <ConfirmServiceText />
+          </Route>
+          <Route path="/ConfirmOrderText">
+            <ConfirmOrderText />
           </Route>
         </Switch>
         <button onClick={confirmAlert} className="navigation__button">
