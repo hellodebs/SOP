@@ -84,7 +84,7 @@ function App() {
   }
 
   function billButtonHandler() {
-    if (window.confirm("Would you like to the bill?")) {
+    if (window.confirm("Would you like to the receive bill?")) {
       history.push("/ConfirmBillText");
     }
   }
