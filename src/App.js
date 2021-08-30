@@ -8,6 +8,7 @@ import Order from "./pages/Order.js";
 import Bill from "./pages/BillPage.js";
 import ConfirmServiceText from "./pages/ConfirmServiceText.js";
 import ConfirmOrderText from "./pages/ConfirmOrderText";
+import ConfirmBillText from "./pages/ConfirmBillText";
 
 import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";
@@ -76,9 +77,15 @@ function App() {
     }
   }
 
-  function confirmButtonHandler() {
+  function orderButtonHandler() {
     if (window.confirm("Would you like to confirm your order?")) {
       history.push("/ConfirmOrderText");
+    }
+  }
+
+  function billButtonHandler() {
+    if (window.confirm("Would you like to the bill?")) {
+      history.push("/ConfirmBillText");
     }
   }
 
@@ -101,6 +108,9 @@ function App() {
           <Route path="/ConfirmOrderText">
             <h2 className="App__heading">Order confirmed</h2>
           </Route>
+          <Route path="/ConfirmBillText">
+            <h2 className="App__heading">Bill will be prepared</h2>
+          </Route>
           <Route path="/">
             <Redirect to="/menu" />
           </Route>
@@ -116,17 +126,20 @@ function App() {
               order={order}
               menu={menu}
               onDeleteButton={deleteButtonHandler}
-              onConfirmButton={confirmButtonHandler}
+              onConfirmButton={orderButtonHandler}
             />
           </Route>
           <Route path="/bill">
-            <Bill />
+            <Bill onConfirmButton={billButtonHandler} />
           </Route>
           <Route path="/ConfirmServiceText">
             <ConfirmServiceText />
           </Route>
           <Route path="/ConfirmOrderText">
             <ConfirmOrderText />
+          </Route>
+          <Route path="/ConfirmBillText">
+            <ConfirmBillText />
           </Route>
         </Switch>
         <button onClick={confirmAlert} className="navigation__button">

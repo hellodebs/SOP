@@ -6,7 +6,7 @@ export default function Order({
   menu,
   order,
   onDeleteButton: deleteItem,
-  onConfirmButton: confirmButton,
+  onConfirmButton: confirmOrderButton,
 }) {
   let total = 0;
   const orderItems = order.map((orderItem) => {
@@ -36,7 +36,7 @@ export default function Order({
       <button
         type="submit"
         className="order__confirm-button"
-        onClick={confirmButton}
+        onClick={confirmOrderButton}
       >
         Confirm order (Total: {total / 100} €)
       </button>
