@@ -1,15 +1,15 @@
-.service__text {
+.base__text {
   padding: 1.25em;
   margin: 1.25rem;
   text-align: center;
   font-size: 1rem;
 }
 
-.service__text > p {
+.base__text > p {
   padding: 2em;
   font-weight: bold;
 }
 
-.service__icon {
+.base__icon {
   font-size: 5rem;
 }

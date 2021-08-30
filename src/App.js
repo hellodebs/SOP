@@ -6,7 +6,7 @@ import usePersistedState from "./hooks/usePersistedState";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order.js";
 import Bill from "./pages/BillPage.js";
-import Service from "./pages/Service.js";
+import ConfirmServiceText from "./pages/ConfirmServiceText.js";
 import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";
 
@@ -70,9 +70,11 @@ function App() {
 
   function confirmAlert() {
     if (window.confirm("Would you like to speak to one member of our team?")) {
-      history.push("/service");
+      history.push("/ConfirmServiceText");
     }
   }
+
+  function confirmButtonHandler() {}
 
   return (
     <Div100vh className="App">
@@ -87,7 +89,7 @@ function App() {
           <Route path="/bill">
             <h2 className="App__heading">Bill</h2>
           </Route>
-          <Route path="/service">
+          <Route path="/ConfirmServiceText">
             <h2 className="App__heading">Service</h2>
           </Route>
           <Route path="/">
@@ -105,13 +107,14 @@ function App() {
               order={order}
               menu={menu}
               onDeleteButton={deleteButtonHandler}
+              onConfirmButton={confirmButtonHandler}
             />
           </Route>
           <Route path="/bill">
             <Bill />
           </Route>
-          <Route path="/service">
-            <Service />
+          <Route path="/ConfirmServiceText">
+            <ConfirmServiceText />
           </Route>
         </Switch>
         <button onClick={confirmAlert} className="navigation__button">
