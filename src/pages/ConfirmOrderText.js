@@ -10,8 +10,8 @@ export default function ConfirmOrderText() {
         Your food will be served in the next 20 minutes.
       </p>
 
-      <p>You can always look into your interim bill in our bill section.</p>
       <BiUserCheck className="base__icon" />
+      <p>You can always look into your interim bill in our bill section.</p>
     </div>
   );
 }
