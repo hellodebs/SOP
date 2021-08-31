@@ -1,11 +1,5 @@
 import "./App.css";
-import {
-  Route,
-  Switch,
-  Redirect,
-  useHistory,
-  useParams,
-} from "react-router-dom";
+import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { BiUser } from "react-icons/bi";
 import usePersistedState from "./hooks/usePersistedState";
@@ -16,19 +10,18 @@ import CheckIn from "./components/CheckIn.js";
 import ConfirmServiceText from "./pages/ConfirmServiceText.js";
 import ConfirmOrderText from "./pages/ConfirmOrderText";
 import ConfirmBillText from "./pages/ConfirmBillText";
-
 import Navigation from "./components/Navigation";
 import Div100vh from "react-div-100vh";
 
 function App() {
   const [menu, setMenu] = useState([]);
   const [order, setOrder] = usePersistedState("order", []);
-  const [table, setTable] = useState([]);
+  const [tableId, setTableId] = useState();
 
   let history = useHistory();
 
   useEffect(() => {
-    const url = `/api/menu.json/`;
+    const url = `/api/menu.json`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -79,6 +72,10 @@ function App() {
     }
   }
 
+  function updateTableId(id) {
+    setTableId(id);
+  }
+
   function confirmAlert() {
     if (window.confirm("Would you like to speak to one member of our team?")) {
       history.push("/confirm-service-text");
@@ -102,8 +99,8 @@ function App() {
     <Div100vh className="App">
       <header className="App__header">
         <Switch>
-          <Route path="/checkin-tableid">
-            <h2 className="App__heading">Check-In Table Id</h2>
+          <Route path="/checkin/:tableId">
+            <h2 className="App__heading">Check In</h2>
           </Route>
           <Route path="/menu">
             <h2 className="App__heading">Menu</h2>
@@ -130,8 +127,8 @@ function App() {
       </header>
       <main className="App__main">
         <Switch>
-          <Route path="/checkin-tableid">
-            <CheckIn />
+          <Route path="/checkin/:tableId">
+            <CheckIn updateTableId={updateTableId} />
           </Route>
           <Route path="/menu">
             <Menu order={order} menu={menu} onUpdateQuantity={updateQuantity} />
