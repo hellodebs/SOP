@@ -80,6 +80,7 @@ function App() {
   function orderButtonHandler() {
     if (window.confirm("Would you like to confirm your order?")) {
       history.push("/ConfirmOrderText");
+      setOrder([]);
     }
   }
 
