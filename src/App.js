@@ -1,11 +1,18 @@
 import "./App.css";
-import { Route, Switch, Redirect, useHistory } from "react-router-dom";
+import {
+  Route,
+  Switch,
+  Redirect,
+  useHistory,
+  useParams,
+} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { BiUser } from "react-icons/bi";
 import usePersistedState from "./hooks/usePersistedState";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order.js";
 import Bill from "./pages/BillPage.js";
+import CheckIn from "./components/CheckIn.js";
 import ConfirmServiceText from "./pages/ConfirmServiceText.js";
 import ConfirmOrderText from "./pages/ConfirmOrderText";
 import ConfirmBillText from "./pages/ConfirmBillText";
@@ -16,11 +23,12 @@ import Div100vh from "react-div-100vh";
 function App() {
   const [menu, setMenu] = useState([]);
   const [order, setOrder] = usePersistedState("order", []);
+  const [table, setTable] = useState([]);
 
   let history = useHistory();
 
   useEffect(() => {
-    const url = "/api/menu.json";
+    const url = `/api/menu.json/`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -73,20 +81,20 @@ function App() {
 
   function confirmAlert() {
     if (window.confirm("Would you like to speak to one member of our team?")) {
-      history.push("/ConfirmServiceText");
+      history.push("/confirm-service-text");
     }
   }
 
   function orderButtonHandler() {
     if (window.confirm("Would you like to confirm your order?")) {
-      history.push("/ConfirmOrderText");
+      history.push("/confirm-order-text");
       setOrder([]);
     }
   }
 
   function billButtonHandler() {
     if (window.confirm("Would you like to receive the bill?")) {
-      history.push("/ConfirmBillText");
+      history.push("/confirm-bill-text");
     }
   }
 
@@ -94,6 +102,9 @@ function App() {
     <Div100vh className="App">
       <header className="App__header">
         <Switch>
+          <Route path="/checkin-tableid">
+            <h2 className="App__heading">Check-In Table Id</h2>
+          </Route>
           <Route path="/menu">
             <h2 className="App__heading">Menu</h2>
           </Route>
@@ -103,13 +114,13 @@ function App() {
           <Route path="/bill">
             <h2 className="App__heading">Bill</h2>
           </Route>
-          <Route path="/ConfirmServiceText">
+          <Route path="/confirm-service-text">
             <h2 className="App__heading">Service</h2>
           </Route>
-          <Route path="/ConfirmOrderText">
+          <Route path="/confirm-order-text">
             <h2 className="App__heading">Order confirmed</h2>
           </Route>
-          <Route path="/ConfirmBillText">
+          <Route path="/confirm-bill-text">
             <h2 className="App__heading">Bill will be prepared</h2>
           </Route>
           <Route path="/">
@@ -119,6 +130,9 @@ function App() {
       </header>
       <main className="App__main">
         <Switch>
+          <Route path="/checkin-tableid">
+            <CheckIn />
+          </Route>
           <Route path="/menu">
             <Menu order={order} menu={menu} onUpdateQuantity={updateQuantity} />
           </Route>
@@ -133,13 +147,13 @@ function App() {
           <Route path="/bill">
             <Bill onConfirmButton={billButtonHandler} />
           </Route>
-          <Route path="/ConfirmServiceText">
+          <Route path="/confirm-service-text">
             <ConfirmServiceText />
           </Route>
-          <Route path="/ConfirmOrderText">
+          <Route path="/confirm-order-text">
             <ConfirmOrderText />
           </Route>
-          <Route path="/ConfirmBillText">
+          <Route path="/confirm-bill-text">
             <ConfirmBillText />
           </Route>
         </Switch>
