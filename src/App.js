@@ -16,7 +16,7 @@ import Div100vh from "react-div-100vh";
 function App() {
   const [menu, setMenu] = useState([]);
   const [order, setOrder] = usePersistedState("order", []);
-  const [tableId, setTableId] = useState();
+  const [tableId, setTableId] = usePersistedState("table", 0);
 
   let history = useHistory();
 
@@ -106,7 +106,7 @@ function App() {
             <h2 className="App__heading">Menu</h2>
           </Route>
           <Route path="/order">
-            <h2 className="App__heading">Order</h2>
+            <h2 className="App__heading">Order {tableId}</h2>
           </Route>
           <Route path="/bill">
             <h2 className="App__heading">Bill</h2>

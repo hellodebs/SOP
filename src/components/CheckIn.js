@@ -7,7 +7,6 @@ export default function CheckIn({ updateTableId }) {
   useEffect(() => {
     updateTableId(tableId);
     history.push("/menu");
-    console.log("Was geht");
   });
-  return <p></p>;
+  return <></>;
 }
