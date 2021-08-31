@@ -2,7 +2,12 @@ import OrderItem from "../components/OrderItem";
 
 import "./Order.css";
 
-export default function Order({ menu, order, onDeleteButton: deleteItem }) {
+export default function Order({
+  menu,
+  order,
+  onDeleteButton: deleteItem,
+  onConfirmButton: confirmOrderButton,
+}) {
   let total = 0;
   const orderItems = order.map((orderItem) => {
     const filteredMenuItem = menu.filter((item) => {
@@ -26,8 +31,13 @@ export default function Order({ menu, order, onDeleteButton: deleteItem }) {
     <>
       {orderItems}
 
-      {/* After clicking confirm, I want the Order page to be empty but the billPage to be updated  */}
-      <button type="submit" className="order__confirm-button">
+      {/* After clicking confirm, I want the Order page to be empty but the billPage to be updated. A confirmatino text should also appear.  */}
+
+      <button
+        type="submit"
+        className="order__confirm-button"
+        onClick={confirmOrderButton}
+      >
         Confirm order (Total: {total / 100} €)
       </button>
     </>

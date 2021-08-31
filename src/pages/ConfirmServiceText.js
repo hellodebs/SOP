@@ -1,9 +1,9 @@
-import "./Service.css";
+import "./base.css";
 import { BiUserCheck } from "react-icons/bi";
 
-export default function Service() {
+export default function ConfirmServiceText() {
   return (
-    <div className="service__text">
+    <div className="base__text">
       <p>
         Thank you!
         <br />
@@ -11,7 +11,7 @@ export default function Service() {
       </p>
 
       <p>One member of our Team will be with you shortly!</p>
-      <BiUserCheck className="service__icon" />
+      <BiUserCheck className="base__icon" />
     </div>
   );
 }

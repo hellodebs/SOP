@@ -1,7 +1,7 @@
 import Bill from "../components/Bill";
 import { useEffect, useState } from "react";
 
-export default function BillPage() {
+export default function BillPage({ onConfirmButton: confirmBillButton }) {
   const [bill, setBill] = useState({});
 
   const total = bill.items
@@ -47,7 +47,11 @@ export default function BillPage() {
           <h2>{total}</h2>
         </div>
       </section>
-      <button type="submit" className="bill__confirm-button">
+      <button
+        onClick={confirmBillButton}
+        type="submit"
+        className="bill__confirm-button"
+      >
         I want to pay please
       </button>
     </>
