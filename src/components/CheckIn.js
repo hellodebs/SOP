@@ -8,5 +8,5 @@ export default function CheckIn({ updateTableId }) {
     updateTableId(tableId);
     history.push("/menu");
   });
-  return <></>;
+  return null;
 }
