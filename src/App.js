@@ -106,7 +106,7 @@ function App() {
             <h2 className="App__heading">Menu</h2>
           </Route>
           <Route path="/order">
-            <h2 className="App__heading">Order {tableId}</h2>
+            <h2 className="App__heading">Order from {tableId}</h2>
           </Route>
           <Route path="/bill">
             <h2 className="App__heading">Bill</h2>
