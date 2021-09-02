@@ -1,6 +1,6 @@
 import OrderItem from "../components/OrderItem";
 
-import "./Order.css";
+import "../components/OrderItem.css";
 
 export default function Order({
   menu,
