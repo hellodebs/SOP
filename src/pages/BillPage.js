@@ -30,7 +30,7 @@ export default function BillPage({ bill, onConfirmButton: confirmBillButton }) {
         {billItems}
 
         <div className="bill__item--total">
-          <h2>{total}</h2>
+          <h2>Total: {total}</h2>
         </div>
       </section>
       <button
