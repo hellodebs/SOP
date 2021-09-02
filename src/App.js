@@ -5,7 +5,7 @@ import { BiUser } from "react-icons/bi";
 import usePersistedState from "./hooks/usePersistedState";
 import Menu from "./pages/Menu";
 import Order from "./pages/Order.js";
-import Bill from "./pages/BillPage.js";
+import BillPage from "./pages/BillPage.js";
 import CheckIn from "./components/CheckIn.js";
 import ConfirmServiceText from "./pages/ConfirmServiceText.js";
 import ConfirmOrderText from "./pages/ConfirmOrderText";
@@ -17,6 +17,9 @@ function App() {
   const [menu, setMenu] = useState([]);
   const [order, setOrder] = usePersistedState("order", []);
   const [tableId, setTableId] = usePersistedState("table", 0);
+  const [bill, setBill] = useState({
+    items: [],
+  });
 
   let history = useHistory();
 
@@ -26,6 +29,18 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setMenu(data.items);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
+  useEffect(() => {
+    const url = "/api/bill.json";
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setBill(data);
       })
       .catch((error) => {
         console.error(error);
@@ -85,6 +100,40 @@ function App() {
   function orderButtonHandler() {
     if (window.confirm("Would you like to confirm your order?")) {
       history.push("/confirm-order-text");
+      let updatedBill = bill;
+      //Receive order
+      //I look at each order item
+      order.forEach((orderItem) => {
+        //check on my bill, whether item already exists or not with filter method.
+        const billItemIndex = bill.items.findIndex((billItem) => {
+          return orderItem.id === billItem.id;
+        });
+
+        if (billItemIndex > -1) {
+          //If item exsists already, I update the quantity
+          updatedBill.items[billItemIndex].quantity =
+            updatedBill.items[billItemIndex].quantity + orderItem.quantity;
+        } else {
+          const filteredMenuItem = menu.filter((item) => {
+            return orderItem.id === item.id;
+          });
+          orderItem = {
+            ...filteredMenuItem[0],
+            ...orderItem,
+          };
+          //if item doesnt exsist yet, I add the new orderitem.
+          updatedBill.items = [
+            ...updatedBill.items,
+            {
+              id: orderItem.id,
+              quantity: orderItem.quantity,
+              name: orderItem.name,
+              price: orderItem.price,
+            },
+          ];
+        }
+      });
+      setBill(updatedBill);
       setOrder([]);
     }
   }
@@ -106,7 +155,7 @@ function App() {
             <h2 className="App__heading">Menu</h2>
           </Route>
           <Route path="/order">
-            <h2 className="App__heading">Order from {tableId}</h2>
+            <h2 className="App__heading">Order from table {tableId}</h2>
           </Route>
           <Route path="/bill">
             <h2 className="App__heading">Bill</h2>
@@ -142,7 +191,7 @@ function App() {
             />
           </Route>
           <Route path="/bill">
-            <Bill onConfirmButton={billButtonHandler} />
+            <BillPage onConfirmButton={billButtonHandler} bill={bill} />
           </Route>
           <Route path="/confirm-service-text">
             <ConfirmServiceText />

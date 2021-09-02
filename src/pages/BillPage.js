@@ -1,9 +1,6 @@
-import Bill from "../components/Bill";
-import { useEffect, useState } from "react";
+import BillItem from "../components/BillItem.js";
 
-export default function BillPage({ onConfirmButton: confirmBillButton }) {
-  const [bill, setBill] = useState({});
-
+export default function BillPage({ bill, onConfirmButton: confirmBillButton }) {
   const total = bill.items
     ?.reduce(
       (previousValue, currentValue) =>
@@ -12,20 +9,8 @@ export default function BillPage({ onConfirmButton: confirmBillButton }) {
     )
     .toFixed(2);
 
-  useEffect(() => {
-    const url = "/api/bill.json";
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => {
-        setBill(data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-
   const billItems = bill.items?.map((item) => {
-    return <Bill key={item.id} item={item} />;
+    return <BillItem key={item.id} item={item} />;
   });
 
   return (
@@ -43,6 +28,7 @@ export default function BillPage({ onConfirmButton: confirmBillButton }) {
           {bill.time}
         </p>
         {billItems}
+
         <div className="bill__item--total">
           <h2>{total}</h2>
         </div>

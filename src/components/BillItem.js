@@ -1,6 +1,6 @@
-import "./Bill.css";
+import "./BillItem.css";
 
-export default function Bill({ item }) {
+export default function BillItem({ item }) {
   const totalPrice = ((item.quantity * item.price) / 100).toFixed(2);
   const singlePrice = (item.price / 100).toFixed(2);
   return (
