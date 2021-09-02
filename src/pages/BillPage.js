@@ -23,9 +23,7 @@ export default function BillPage({ bill, onConfirmButton: confirmBillButton }) {
           {bill.postalcode}
         </h4>
         <p>
-          {bill.id}
-          {bill.date}
-          {bill.time}
+          {bill.id} {bill.date} {bill.time}
         </p>
         {billItems}
 
