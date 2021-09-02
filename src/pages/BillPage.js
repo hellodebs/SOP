@@ -19,7 +19,7 @@ export default function BillPage({
 
   return (
     <>
-      <section className="bill__item">
+      <section className="billpage__item">
         <h3>{bill.name}</h3>
         <h4>
           {bill.streetname}
