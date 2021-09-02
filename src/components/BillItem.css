@@ -24,7 +24,9 @@
   grid-template-columns: repeat(2, 1fr);
   justify-items: start;
   margin: 0.8rem;
+  text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 h5 {

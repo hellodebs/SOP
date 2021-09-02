@@ -1,5 +1,4 @@
 import OrderItem from "../components/OrderItem";
-
 import "../components/OrderItem.css";
 
 export default function Order({
@@ -30,8 +29,6 @@ export default function Order({
   return (
     <>
       {orderItems}
-
-      {/* After clicking confirm, I want the Order page to be empty but the billPage to be updated. A confirmatino text should also appear.  */}
 
       <button
         type="submit"
