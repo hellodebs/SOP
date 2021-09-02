@@ -141,6 +141,9 @@ function App() {
   function billButtonHandler() {
     if (window.confirm("Would you like to receive the bill?")) {
       history.push("/confirm-bill-text");
+      let updatedBill = bill;
+      updatedBill.items = [];
+      setBill(updatedBill);
     }
   }
 

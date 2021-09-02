@@ -43,7 +43,7 @@ export default function BillPage({
       <button
         onClick={confirmBillButton}
         type="submit"
-        className="bill__confirm-button"
+        className="billpage__confirm-button"
       >
         I want to pay please
       </button>
