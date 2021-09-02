@@ -1,6 +1,10 @@
 import BillItem from "../components/BillItem.js";
 
-export default function BillPage({ bill, onConfirmButton: confirmBillButton }) {
+export default function BillPage({
+  bill,
+  onConfirmButton: confirmBillButton,
+  tableId,
+}) {
   const total = bill.items
     ?.reduce(
       (previousValue, currentValue) =>
@@ -23,7 +27,11 @@ export default function BillPage({ bill, onConfirmButton: confirmBillButton }) {
           {bill.postalcode}
         </h4>
         <p>
-          {bill.id} {bill.date} {bill.time}
+          Table {tableId}
+          <br />
+          Receipt{bill.id}
+          <br />
+          Date: {bill.date} Time: {bill.time}
         </p>
         {billItems}
 

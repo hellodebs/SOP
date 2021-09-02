@@ -191,7 +191,11 @@ function App() {
             />
           </Route>
           <Route path="/bill">
-            <BillPage onConfirmButton={billButtonHandler} bill={bill} />
+            <BillPage
+              onConfirmButton={billButtonHandler}
+              bill={bill}
+              tableId={tableId}
+            />
           </Route>
           <Route path="/confirm-service-text">
             <ConfirmServiceText />
