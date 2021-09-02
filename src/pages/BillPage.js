@@ -35,9 +35,10 @@ export default function BillPage({
         </p>
         {billItems}
 
-        <div className="bill__item--total">
-          <h2>Total: {total}</h2>
+        <div>
+          <h2>Total: {total} €</h2>
         </div>
+        <p className="billpage__tax--info">*including 19% tax</p>
       </section>
       <button
         onClick={confirmBillButton}

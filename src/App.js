@@ -3,8 +3,8 @@ import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { BiUser } from "react-icons/bi";
 import usePersistedState from "./hooks/usePersistedState";
-import Menu from "./pages/Menu";
-import Order from "./pages/Order.js";
+import MenuPage from "./pages/MenuPage";
+import OrderPage from "./pages/OrderPage.js";
 import BillPage from "./pages/BillPage.js";
 import CheckIn from "./components/CheckIn.js";
 import ConfirmServiceText from "./pages/ConfirmServiceText.js";
@@ -180,10 +180,14 @@ function App() {
             <CheckIn updateTableId={updateTableId} />
           </Route>
           <Route path="/menu">
-            <Menu order={order} menu={menu} onUpdateQuantity={updateQuantity} />
+            <MenuPage
+              order={order}
+              menu={menu}
+              onUpdateQuantity={updateQuantity}
+            />
           </Route>
           <Route path="/order">
-            <Order
+            <OrderPage
               order={order}
               menu={menu}
               onDeleteButton={deleteButtonHandler}
