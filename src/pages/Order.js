@@ -38,7 +38,7 @@ export default function Order({
         className="order__confirm-button"
         onClick={confirmOrderButton}
       >
-        Confirm order (Total: {total / 100} €)
+        Confirm order (Total: {(total / 100).toFixed(2)} €)
       </button>
     </>
   );
