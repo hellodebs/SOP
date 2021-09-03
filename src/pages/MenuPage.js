@@ -18,15 +18,15 @@ export default function Menu({
     if (index === 0 || menu[index - 1].type !== item.type) {
       itemTypeHeader = (
         <div className="menupage__item-type">
-          <h3>{item.type}</h3>
+          <h2>{item.type}</h2>
         </div>
       );
     }
     return (
-      <>
+      <div key={item.id}>
         {itemTypeHeader ?? null}
-        <MenuItem key={item.id} item={item} onUpdateQuantity={updateQuantity} />
-      </>
+        <MenuItem item={item} onUpdateQuantity={updateQuantity} />
+      </div>
     );
   });
 }

@@ -1,3 +1,6 @@
+@import "./styles/_color.css";
+@import "./styles/_shadow.css";
+
 *,
 ::before,
 ::after {
@@ -19,8 +22,7 @@
   padding: 1.25rem;
   width: 100%;
   background-color: var(--primary-white);
-  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
-    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  box-shadow: var(--primary-shadow);
 }
 
 .App__main {
@@ -35,8 +37,7 @@
   width: 100%;
   padding: 1.25rem;
   background-color: var(--primary-white);
-  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 5px,
-    rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  box-shadow: var(--secondary-shadow);
 }
 
 .App__heading {
@@ -52,7 +53,5 @@
   padding: 0.2em;
   background-color: var(--primary-white);
   border-radius: 50%;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: var(--tertiary-shadow);
 }

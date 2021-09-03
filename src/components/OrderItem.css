@@ -1,7 +1,5 @@
-@import "../styles/_color.css";
-
 .order__item {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: var(--quartenary-shadow);
   border-radius: 5px;
   padding: 1.25em;
   margin: 1.25rem;
@@ -16,7 +14,7 @@
 
 .order__item--button {
   margin: 1.25rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: var(--quartenary-shadow);
   border-radius: 5px;
   border: none;
   background-color: var(--primary-white);
@@ -37,7 +35,7 @@
 .orderpage__confirm-button {
   margin: 1.25rem;
   padding: 0.8em 5em 0.4em 5em;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: var(--quartenary-shadow);
   border-radius: 5px;
   border: none;
   background: var(--quarternary-green-background);
