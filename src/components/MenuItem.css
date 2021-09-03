@@ -12,8 +12,12 @@
   gap: 1em;
 }
 
-.menu__item--type {
-  font-weight: bold;
+.menupage__item-type {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1.25rem;
+  text-align: left;
 }
 
 .menu__item--price {

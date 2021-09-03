@@ -16,7 +16,11 @@ export default function Menu({
     }
     let itemTypeHeader = null;
     if (index === 0 || menu[index - 1].type !== item.type) {
-      itemTypeHeader = <h3 className="menu__item--type">{item.type}</h3>;
+      itemTypeHeader = (
+        <div className="menupage__item-type">
+          <h3>{item.type}</h3>
+        </div>
+      );
     }
     return (
       <>
