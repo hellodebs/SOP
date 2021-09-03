@@ -1,11 +1,8 @@
 import "./ItemImage.css";
 
 export default function ItemImage({ item }) {
-  return (
-    <img
-      src={`/images/menu/${item.id}.jpg`}
-      alt={item.name}
-      className="item__image"
-    />
-  );
+  const imageStyle = {
+    backgroundImage: `url(/images/menu/${item.id}.jpg)`,
+  };
+  return <div className="item__image" style={imageStyle}></div>;
 }

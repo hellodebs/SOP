@@ -21,7 +21,6 @@ export default function MenuItem({ item, onUpdateQuantity: updateQuantity }) {
       <div className="menu__item--content">
         <ItemImage item={item} />
         <div>
-          <h3 className="menu__item--type">{item.type}</h3>
           <h2>{item.name}</h2>
           <p>{item.description}</p>
         </div>
