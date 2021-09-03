@@ -33,10 +33,14 @@
 }
 
 .menu__counter {
-  text-align: right;
+  display: grid;
+  grid-template-columns: 7fr 1fr 1fr;
+  justify-items: end;
+  align-items: center;
+  border: none;
 }
 
 .menu__counter--number {
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding: 0.2em;
 }
