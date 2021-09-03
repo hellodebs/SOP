@@ -46,14 +46,20 @@ h5 {
 
 .billpage__confirm-button {
   margin: 1.25rem;
+  padding: 0.8em 5em 0.4em 5em;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   border: none;
-  background-color: var(--primary-white);
-  padding: 0.5em;
+  background: var(--quarternary-green-background);
+  background: var(--quinary-green-gradient);
+  color: var(--primary-white);
   font-size: 1.2rem;
 }
 
 .billpage__tax--info {
   text-align: left;
+}
+
+.billpage__confirm-check {
+  font-size: 2rem;
 }

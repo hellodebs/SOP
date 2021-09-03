@@ -12,11 +12,11 @@
 }
 
 .navigation__navlink {
-  color: var(--navigation-navlink-inactive);
+  color: var(--secondary-gray);
 }
 
 .navigation__navlink--active {
-  color: var(--navigation-navlink-active);
+  color: var(--tertiary-black);
 }
 
 .navigation__button {

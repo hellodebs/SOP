@@ -1,4 +1,5 @@
 import BillItem from "../components/BillItem.js";
+import { BiCheck } from "react-icons/bi";
 
 export default function BillPage({
   bill,
@@ -45,7 +46,7 @@ export default function BillPage({
         type="submit"
         className="billpage__confirm-button"
       >
-        I want to pay please
+        Check please <BiCheck className="billpage__confirm-check" />
       </button>
     </>
   );

@@ -1,5 +1,6 @@
 import OrderItem from "../components/OrderItem";
 import "../components/OrderItem.css";
+import { BiCheck } from "react-icons/bi";
 
 export default function Order({
   menu,
@@ -29,14 +30,17 @@ export default function Order({
   return (
     <>
       {orderItems}
-
       <button
         type="submit"
-        className="order__confirm-button"
+        className="orderpage__confirm-button"
         onClick={confirmOrderButton}
       >
-        Confirm order (Total: {(total / 100).toFixed(2)} €)
+        Confirm order
+        <BiCheck className="orderpage__confirm-check" />
       </button>
+      <p className="orderpage__total-amount">
+        Total: {(total / 100).toFixed(2)} €
+      </p>
     </>
   );
 }
