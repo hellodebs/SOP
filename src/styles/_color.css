@@ -1,5 +1,5 @@
 :root {
-  --button-bg: white;
-  --navigation-navlink-inactive: gray;
-  --navigation-navlink-active: black;
+  --primary-white: white;
+  --secondary-gray: gray;
+  --tertiary-black: black;
 }
