@@ -39,7 +39,7 @@ export default function Order({
         <BiCheck className="orderpage__confirm-check" />
       </button>
       <p className="orderpage__total-amount">
-        Total: {(total / 100).toFixed(2)} €
+        Current total: {(total / 100).toFixed(2)} €
       </p>
     </>
   );

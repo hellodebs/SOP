@@ -32,7 +32,7 @@ export default function BillPage({
           <br />
           Receipt{bill.id}
           <br />
-          Date: {bill.date} Time: {bill.time}
+          Date: {bill.date}
         </p>
         {billItems}
 
