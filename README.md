@@ -1,70 +1,17 @@
-# Getting Started with Create React App
+# Scan Order Pay App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is one part of a bigger system and this one is built out of the clients perspective.
+An app from the service perspective needs to be build, too.
 
-## Available Scripts
+The SOP app idea came up since I love to go out to eat. But after serving your order you get forgotten as a client quite often. Looking and waving to ask either for re-order or at least for the bill was making me think on how to make this even more convenient.
 
-In the project directory, you can run:
+I need to scan a code in the beginning anyway either to put in my details or to look through the menu. So why not order and pay through an app right away?
 
-### `npm start`
+After you scan the code you will be directed to the menu page, where you can scroll through the menu and choose your food and quantity.
+In the next page (called order page) you have an overview of the items you chose from the menu. You can remove items and see the current total amount. You need to confirm the order, which guides you to a confirmation page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The last page is the bill page. It only updates the bill after confirming any order. The order page will be cleared and is ready for ordering additional items. After confirming the bill page, you will be guided to another confirmatino page.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The best part is that you don't need to look and wave for the service's attention anymore - just use the service button, which is shown on every page.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![sop app](https://user-images.githubusercontent.com/85886434/132139813-b2ee5eb7-6bc6-4e46-9e90-68c7e61f4b9d.png)
