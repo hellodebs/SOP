@@ -1,6 +1,6 @@
 import OrderItem from "../components/OrderItem";
-
-import "./Order.css";
+import "../components/OrderItem.css";
+import { BiCheck } from "react-icons/bi";
 
 export default function Order({
   menu,
@@ -30,16 +30,17 @@ export default function Order({
   return (
     <>
       {orderItems}
-
-      {/* After clicking confirm, I want the Order page to be empty but the billPage to be updated. A confirmatino text should also appear.  */}
-
       <button
         type="submit"
-        className="order__confirm-button"
+        className="orderpage__confirm-button"
         onClick={confirmOrderButton}
       >
-        Confirm order (Total: {total / 100} €)
+        Confirm order
+        <BiCheck className="orderpage__confirm-check" />
       </button>
+      <p className="orderpage__total-amount">
+        Current total: {(total / 100).toFixed(2)} €
+      </p>
     </>
   );
 }

@@ -1,5 +1,16 @@
 :root {
-  --button-bg: white;
-  --navigation-navlink-inactive: gray;
-  --navigation-navlink-active: black;
+  --primary-white: white;
+  --secondary-gray: gray;
+  --tertiary-black: black;
+  --quarternary-green-background: rgb(110, 226, 107);
+  --quinary-green-gradient: linear-gradient(
+    180deg,
+    rgba(110, 226, 107, 1) 0%,
+    rgba(66, 166, 92, 1) 45%
+  );
+  --senary-gray-gradient: linear-gradient(
+    180deg,
+    rgba(224, 224, 224, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }

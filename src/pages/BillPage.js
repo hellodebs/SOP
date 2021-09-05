@@ -1,6 +1,11 @@
 import BillItem from "../components/BillItem.js";
+import { BiCheck } from "react-icons/bi";
 
-export default function BillPage({ bill, onConfirmButton: confirmBillButton }) {
+export default function BillPage({
+  bill,
+  onConfirmButton: confirmBillButton,
+  tableId,
+}) {
   const total = bill.items
     ?.reduce(
       (previousValue, currentValue) =>
@@ -15,7 +20,7 @@ export default function BillPage({ bill, onConfirmButton: confirmBillButton }) {
 
   return (
     <>
-      <section className="bill__item">
+      <section className="billpage__item">
         <h3>{bill.name}</h3>
         <h4>
           {bill.streetname}
@@ -23,22 +28,25 @@ export default function BillPage({ bill, onConfirmButton: confirmBillButton }) {
           {bill.postalcode}
         </h4>
         <p>
-          {bill.id}
-          {bill.date}
-          {bill.time}
+          Table {tableId}
+          <br />
+          Receipt{bill.id}
+          <br />
+          Date: {bill.date}
         </p>
         {billItems}
 
-        <div className="bill__item--total">
-          <h2>{total}</h2>
+        <div>
+          <h2>Total: {total} €</h2>
         </div>
+        <p className="billpage__tax--info">*including 19% tax</p>
       </section>
       <button
         onClick={confirmBillButton}
         type="submit"
-        className="bill__confirm-button"
+        className="billpage__confirm-button"
       >
-        I want to pay please
+        Check please <BiCheck className="billpage__confirm-check" />
       </button>
     </>
   );

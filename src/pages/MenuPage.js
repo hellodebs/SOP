@@ -5,7 +5,7 @@ export default function Menu({
   order,
   onUpdateQuantity: updateQuantity,
 }) {
-  return menu.map((item) => {
+  return menu.map((item, index) => {
     const filteredOrderItem = order.filter((orderItem) => {
       return orderItem.id === item.id;
     });
@@ -14,9 +14,19 @@ export default function Menu({
     } else {
       item.quantity = 0;
     }
-
+    let itemTypeHeader = null;
+    if (index === 0 || menu[index - 1].type !== item.type) {
+      itemTypeHeader = (
+        <div className="menupage__item-type">
+          <h2>{item.type}</h2>
+        </div>
+      );
+    }
     return (
-      <MenuItem key={item.id} item={item} onUpdateQuantity={updateQuantity} />
+      <div key={item.id}>
+        {itemTypeHeader ?? null}
+        <MenuItem item={item} onUpdateQuantity={updateQuantity} />
+      </div>
     );
   });
 }

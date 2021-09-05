@@ -20,7 +20,7 @@
       "id": 3,
       "image": true,
       "type": "Main",
-      "name": "Tteokbbokki",
+      "name": "Tteokbokki",
       "description": "Hot spicy ricecake with fishcake and vegetable",
       "price": 890
     },
@@ -66,7 +66,7 @@
     {
       "id": 9,
       "type": "Non alcoholic drinks",
-      "name": "Water sparkling/still 0,75L",
+      "name": "Water spark./still 0,75L",
       "price": 490
     },
     {
@@ -78,7 +78,7 @@
     {
       "id": 11,
       "type": "Alcoholic Drinks",
-      "name": "Alsterwasser 0,3L",
+      "name": "Alster 0,3L",
       "price": 380
     }
   ]

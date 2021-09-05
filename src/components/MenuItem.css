@@ -1,5 +1,5 @@
 .menu__item {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: var(--quartenary-shadow);
   border-radius: 5px;
   padding: 1.25em;
   margin: 1.25rem;
@@ -8,31 +8,40 @@
 
 .menu__item--content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1.5fr 1fr;
   gap: 1em;
 }
 
-.menu__item--type {
-  font-weight: bold;
+.menupage__item-type {
+  box-shadow: var(--quartenary-shadow);
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1.25rem;
+  text-align: left;
+  font-weight: 800;
+  background: var(--senary-gray-gradient);
 }
 
 .menu__item--price {
   font-size: 1.2rem;
-  font-weight: bold;
   justify-self: right;
 }
 
 .menu__counter--button {
   border: none;
-  background-color: var(--button-bg);
-  font-size: 1.2rem;
+  background-color: var(--primary-white);
+  font-size: 2rem;
 }
 
 .menu__counter {
-  text-align: right;
+  display: grid;
+  grid-template-columns: 7fr 1fr 1fr;
+  justify-items: end;
+  align-items: center;
+  border: none;
 }
 
 .menu__counter--number {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   padding: 0.2em;
 }
