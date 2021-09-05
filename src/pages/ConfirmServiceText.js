@@ -9,9 +9,8 @@ export default function ConfirmServiceText() {
         <br />
         We have received your request.
       </p>
-
-      <p>One member of our Team will be with you shortly!</p>
       <BiUserCheck className="base__icon" />
+      <p>One member of our Team will be with you shortly!</p>
     </div>
   );
 }

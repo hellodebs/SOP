@@ -10,7 +10,6 @@ export default function ConfirmBillText() {
         <br />
         Our team will prepare your bill right away.
       </p>
-
       <BiUserCheck className="base__icon" />
       <p>We are looking forward to welcoming you soon again!</p>
     </div>
